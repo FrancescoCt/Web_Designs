@@ -1,0 +1,83 @@
+.boxContent i{
+	margin-bottom: 5px;
+	position: relative;
+}
+.boxContent::before,
+.boxContent::after{
+	content:'';
+	position: absolute;
+	border-radius: 10px;
+}
+.boxContent::before{
+	width: 100%;
+	height: 100%;
+	background: rgb(255, 255, 255);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.075);
+	z-index: -1;
+}
+.boxContent::after{
+	width: 115%;
+	height: 115%;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.050);
+	z-index: -2;
+}
+.box input:checked ~ .boxContent::after{
+	background: linear-gradient(to right, #a71d31, #3f0d12)
+}
+.box input:checked ~ .boxContent i, .box input:checked ~ .boxContent p{
+	background: linear-gradient(to right, #a71d31, #3f0d12);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:left;
+	/*height:100vh;*/
+}
+heading(margin-bottom: 15px;)
+.container{
+	width: 500px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.container .box{
+	width: 80px;
+	height: 80px;
+	position: relative;
+	margin: 20px;
+}
+
+.container .box input{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	z-index: 20;
+}
+.boxContent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.boxContent img{
+	width: 50px;
+	height: 50px;
+}
