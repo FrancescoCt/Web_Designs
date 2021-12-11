@@ -3,6 +3,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 ## Elementi generali
 * Menu
 * Checkbox
+* Buttons
 ### Menu
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
@@ -14,6 +15,12 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | ------------- | ------------- | ------------- | 
 | `checkbox1` | _icone nere su sfondo bianco, rosso scuro alla selezione, allineamento a sinistra_  | **HTML+CSS**|
 | `checkbox2` | _icone contatti social con effetto alla selezione, sfondo scuro_  | **HTML+CSS**|
+| `New Checkbox` | _work in progress_  | **HTML+CSS**|
+
+### Buttons
+| Project       | Description   | Languages|
+| ------------- | ------------- | ------------- | 
+| `downloadUpload` | _bottoni download e upload con hover e icone minimali_  | **HTML+CSS**|
 | `New Checkbox` | _work in progress_  | **HTML+CSS**|
 
 ## Browsers testati
