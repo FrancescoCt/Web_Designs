@@ -20,8 +20,9 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 ### Buttons
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
+| `cardHover1` | _bottoni di selezione profilo, preferiti e contatti con hover e icone minimali_  | **HTML+CSS**|
 | `downloadUpload` | _bottoni download e upload con hover e icone minimali_  | **HTML+CSS**|
-| `New Checkbox` | _work in progress_  | **HTML+CSS**|
+| `New Button` | _work in progress_  | **HTML+CSS**|
 
 ## Browsers testati
 * Chrome
