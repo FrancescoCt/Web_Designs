@@ -25,7 +25,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | `downloadLoading` | _animazione di caricamento del pulsante download_  | **HTML+CSS+JS**|
 | `googleMapsRadioButton` | _Rappresentazione bottoni "Driving", "Ciclying" e "Walking" in stile Google Maps_  | **HTML+CSS**|
 | `flashButton` | _Container con messaggio di successo o di errore con animazione simpatica_  | **HTML+CSS**|
-| `New Button` | _work in progress_  | **HTML+CSS**|
+| `cards1` | _Disposizione verticale di carte/post stile instagram, tema rosso-arancio, immagini e testo personalizzabili_  | **HTML+CSS**|
 
 ## Browsers testati
 * Chrome
