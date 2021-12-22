@@ -5,6 +5,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 * Checkbox
 * Buttons
 * Image Slider
+* Music Player
 ### Menu
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
@@ -16,7 +17,6 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | ------------- | ------------- | ------------- | 
 | `checkbox1` | _icone nere su sfondo bianco, rosso scuro alla selezione, allineamento a sinistra_  | **HTML+CSS**|
 | `checkbox2` | _icone contatti social con effetto alla selezione, sfondo scuro_  | **HTML+CSS**|
-| `New Checkbox` | _work in progress_  | **HTML+CSS**|
 
 ### Buttons
 | Project       | Description   | Languages|
@@ -32,6 +32,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
 | `imageSlider1` | _scorritore di immagini pagina intera, semplice_  | **HTML+CSS+JS**|
+| `imageSlider2` | _galleria di immagini con visualizzazione a schermo intero al click_  | **HTML+CSS+JS**|
 
 ### Music_Player
 | Project       | Description   | Languages|
