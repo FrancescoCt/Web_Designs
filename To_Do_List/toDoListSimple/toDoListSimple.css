@@ -1,0 +1,115 @@
+/*========================================================
+          Sitewide Styles
+==========================================================*/
+/*multiple selector*/
+* {
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  background: white;
+  font-family: Arial, sans-serif;
+  color: black;
+  text-align: center;
+  margin-top: 0;
+}
+
+/*========================================================
+          Format Section
+========================================================*/
+/*changing title style*/
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #FF5722;/*#257db8; blue*/
+}
+
+/*Changing input box style*/
+input{
+  padding: 10px;
+  margin: 0 auto;
+  width: 25%;
+  margin: 6px;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 1px solid;
+  background-color: white;
+  color: black;
+}
+
+/*changing button box style*/
+#clickMe{
+  border-style: none;
+  background: #FF5722;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 200;
+  font-size: 20px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.8);
+}
+
+
+/*========================================================
+          List Section
+========================================================*/
+/*move text to the right by 20px*/
+span {
+  margin-left: 20px;
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+/*Edit list*/
+#list_items {
+  color: black;
+  font-size: 16px;
+  border: none;
+  margin: 0 auto;
+  width: 35%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/*format the remove or delete button*/
+.remove {
+  float: right;
+  background: rgb(231, 236, 237);
+  border-radius: 3px;
+  border: none;
+  color: #acb4c2;
+  font-size: 15px;
+  padding: 3px 5px;
+  margin-right: 20px;
+}
+
+/*hightlight remove button when hover */
+.remove:hover {
+  background: rgb(230, 250, 230);
+}
+
+/*Format List*/
+ol li {
+  text-align: left;
+  padding: 20px 0;
+}
+
+/*Create a bullet before each list*/
+ /*ol li:before {
+  content: '';
+  position: absolute;
+ 
+  width: 14px;
+  height: 14px;
+  margin: auto;
+  border-radius: 100%;
+  background: #A0D468;
+  display: block;
+}*/
+
+/*Change color when the button is hover*/
+ol li:hover {
+  background: #FAFAFA;
+  border-radius: 50px;
+}
