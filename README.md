@@ -6,6 +6,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 * Buttons
 * Image Slider
 * Music Player
+* To Do List
 ### Menu
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
@@ -39,6 +40,11 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
 | `musicPlayer1` | _esempio di riproduttore di musica moderno, funzione di "preferiti", "mi piace", "elimina traccia" e "ripeti" da ridefinire_  | **HTML+CSS+JS**|
+
+### To_Do_List
+| Project       | Description   | Languages|
+| ------------- | ------------- | ------------- | 
+| `toDoListSimple` | _semplice interfaccia chiara con tema arancione_  | **HTML+CSS+JS**|
 
 ## Browsers testati
 * Chrome
