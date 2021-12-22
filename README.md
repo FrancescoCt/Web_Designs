@@ -33,6 +33,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | ------------- | ------------- | ------------- | 
 | `imageSlider1` | _scorritore di immagini pagina intera, semplice_  | **HTML+CSS+JS**|
 | `imageSlider2` | _galleria di immagini con visualizzazione a schermo intero al click_  | **HTML+CSS+JS**|
+| `videoBackground` | _impostazione di un video di sfondo per la pagina html_  | **HTML+CSS**|
 
 ### Music_Player
 | Project       | Description   | Languages|
