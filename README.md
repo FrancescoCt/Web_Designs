@@ -4,6 +4,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 * Menu
 * Checkbox
 * Buttons
+* Image Slider
 ### Menu
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
@@ -26,6 +27,11 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | `googleMapsRadioButton` | _Rappresentazione bottoni "Driving", "Ciclying" e "Walking" in stile Google Maps_  | **HTML+CSS**|
 | `flashButton` | _Container con messaggio di successo o di errore con animazione simpatica_  | **HTML+CSS**|
 | `cards1` | _Disposizione verticale di carte/post stile instagram, tema rosso-arancio, immagini e testo personalizzabili_  | **HTML+CSS**|
+
+### Image_Slider
+| Project       | Description   | Languages|
+| ------------- | ------------- | ------------- | 
+| `imageSlider1` | _scorritore di immagini pagina intera, semplice_  | **HTML+CSS+JS**|
 
 ## Browsers testati
 * Chrome
