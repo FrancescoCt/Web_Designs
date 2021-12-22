@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+body{
+	background: black;
+}
+
+.wrapper {
+  width: 960px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 10px 0;
+  background: white;
+  
+}
+
+.parent-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  width: 25%;
+  height: 227px;
+  min-width: 250px;
+  padding: 8px;
+  box-shadow: 0 0 3px #bdbdbd;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: zoom-in;
+  transition: all 0.2s ease-in;
+  border-radius: 4px;
+}
+.image-box img {
+  width: 100%;
+  height: 100%;
+}
+.image-box:hover {
+  box-shadow: 0 5px 18px -3px #bdbdbd;
+}
+
+.modal-box {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(3, 3, 3, 0.9);
+  transition: all 0.33s ease-out;
+}
+.modal-box .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: zoom-out;
+  z-index: 1;
+}
+.modal-box--image {
+  background: white;
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  max-height: 90%;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-box--image img {
+  width: 92%;
+  max-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-box.invisible {
+  opacity: 0;
+  transform: translateY(-120%);
+}
