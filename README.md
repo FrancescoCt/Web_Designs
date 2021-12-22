@@ -33,6 +33,11 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | ------------- | ------------- | ------------- | 
 | `imageSlider1` | _scorritore di immagini pagina intera, semplice_  | **HTML+CSS+JS**|
 
+### Music_Player
+| Project       | Description   | Languages|
+| ------------- | ------------- | ------------- | 
+| `musicPlayer1` | _esempio di riproduttore di musica moderno, funzione di "preferiti", "mi piace", "elimina traccia" e "ripeti" da ridefinire_  | **HTML+CSS+JS**|
+
 ## Browsers testati
 * Chrome
 * Bing
