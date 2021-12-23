@@ -7,6 +7,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 * Image Slider
 * Music Player
 * To Do List
+* Login Page
 ### Menu
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
@@ -45,6 +46,11 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
 | `toDoListSimple` | _semplice interfaccia chiara con tema arancione_  | **HTML+CSS+JS**|
+
+### Login_Page
+| Project       | Description   | Languages|
+| ------------- | ------------- | ------------- | 
+| `loginPage1` | _semplice login con mail e password, tema scuro_  | **HTML+CSS**|
 
 ## Browsers testati
 * Chrome
