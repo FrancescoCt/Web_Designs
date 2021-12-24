@@ -14,6 +14,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | ------------- | ------------- | ------------- | 
 | `menu1` | _tema scuro con hover rosso, animazione alla selezione, posizione laterale destra_  | **HTML+CSS**
 | `coolNavbar` | _tema chiaro con slider, posizione orizzontale alta_  | **HTML+CSS+JS**|
+| `dropMenu` | _menu a cascata con icone_  | **HTML+CSS**|
 
 ### Checkbox
 | Project       | Description   | Languages|
