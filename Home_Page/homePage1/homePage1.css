@@ -1,0 +1,137 @@
+/*Dichiaro i font superbelli*/
+@font-face {
+	font-family: 'Harukaze';
+	src: url('specialFonts/HarukazeSolid-X3Wp9.ttf');
+}
+@font-face{
+	font-family: 'Osake';
+	src: url('specialFonts/Osake-x3oqj.otf');
+}
+html{
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+/*
+@font-face{
+	font-family: 'JapanDesign';
+	src: url('specialFonts/JapaneseDesigns-3mKM.ttf') format('truetype');
+}
+Easter egg, just for fun
+*/
+/*Parte coolnavbar*/
+nav{
+	position: relative;
+	width: 513px;
+	height: 50px;
+	background: #fff;
+	box-shadow: 0 6px 10px rgba(179, 179, 179, .5);
+	border-radius: 10px;
+}
+
+ul{
+	display: flex;
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	display: block;
+	width: calc(513px / 5);
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+	color: #121212;
+	font-family: 'Harukaze';
+	font-size: 40px;
+}
+.slide{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: calc(512px / 5);
+	height: 4px;
+	background: #3641b7;
+	transition: .4s;
+	border-radius: 10px;
+}
+
+li img{
+	border-radius: 50px;
+	width: 40px;
+	height: 40px;
+	margin-top: 5px;
+}
+
+/*Parte videoBackground*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial;
+}
+
+h1 {
+	font-family: 'Osake';
+	margin-bottom: 60px;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+h2{
+	
+	font-family: 'Osake';
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+
+p{
+	font-family: 'Harukaze';
+	font-size: 50px;
+}
+
+.showcase {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.video-container:after {
+    content: '';
+    z-index: 1;
+    min-height: 105%;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.content {
+    z-index: 2;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
