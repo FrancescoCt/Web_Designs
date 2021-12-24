@@ -8,6 +8,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 * Music Player
 * To Do List
 * Login Page
+* Home Page
 ### Menu
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
@@ -36,6 +37,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | `imageSlider1` | _scorritore di immagini pagina intera, semplice_  | **HTML+CSS+JS**|
 | `imageSlider2` | _galleria di immagini con visualizzazione a schermo intero al click_  | **HTML+CSS+JS**|
 | `videoBackground` | _impostazione di un video di sfondo per la pagina html_  | **HTML+CSS**|
+| `animeGallery` | _esempio di disposizione per una possibile galleria di foto, tema anime collegamento a **homepage1**_  | **HTML+CSS**|
 
 ### Music_Player
 | Project       | Description   | Languages|
@@ -51,6 +53,11 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
 | `loginPage1` | _semplice login con mail e password, tema scuro_  | **HTML+CSS**|
+
+### Home_Page
+| Project       | Description   | Languages|
+| ------------- | ------------- | ------------- | 
+| `homePage1` | _semplice landing page con video di sottofondo e menu basico da sviluppare meglio, collegamento a **animeGallery**_  | **HTML+CSS+JS**|
 
 ## Browsers testati
 * Chrome
