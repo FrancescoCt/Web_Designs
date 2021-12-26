@@ -14,23 +14,22 @@ let mostraButtons = document.querySelectorAll(".mostra")
 function mostra(){
 	this.parentNode.parentNode.childNodes[3].style.display = "block";
 	//oscuro il mostra ed evidenzio il riduci
-	//console.log(this.parentNode.childNodes[5]);
 	this.style.display = "none";
-	this.parentNode.childNodes[5].style.display = "block";
+	this.parentNode.childNodes[3].style.display = "block";
 	//aggiusto il cardtitle
-	this.parentNode.childNodes[3].style.marginLeft = "60%";
-	this.parentNode.childNodes[5].style.marginTop = "-7%";
+	this.parentNode.childNodes[5].style.marginLeft = "60%";
+	this.parentNode.childNodes[3].style.marginTop = "-1%";
+	
 	
 }
 function riduci(){
 	this.parentNode.parentNode.childNodes[3].style.display = "none";
 	//oscuro il riduci ed evidenzio il mostra
-	//console.log(this.parentNode.childNodes[1]);
 	this.style.display = "none";
 	this.parentNode.childNodes[1].style.display = "block";
 	//aggiusto il cardtitle
-	this.parentNode.childNodes[3].style.marginLeft = "60%";
-	this.parentNode.childNodes[1].style.marginBottom = "-6%";
+	this.parentNode.childNodes[5].style.marginLeft = "60%";
+	this.parentNode.childNodes[1].style.marginTop = "-1%";
 }
 
 mostraButtons.forEach(ele => {

@@ -95,6 +95,11 @@ a{
 	transition: .4s;
 	border-radius: 5px;
 }
+p{
+	font-family: 'Harukaze';
+	color: white;
+	font-size: 44px;
+}
 /*Parte di menu1*/
 
 aside nav{

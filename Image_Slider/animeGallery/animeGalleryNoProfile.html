@@ -5,6 +5,7 @@
 		<link rel="shortcut icon" href="icon.ico">
 		<link rel="stylesheet" href= "../../css/font-awesome.min.css" />
 		<link rel="stylesheet" href= "animeGallery.css" />
+		<link rel="stylesheet" href= "successError.css" />
 		<script src="animeGallery.js" defer></script>
 		<meta charset="UTF-8">
 	</head>
@@ -21,69 +22,53 @@
 				<li><a href="../../Home_Page/homePage1/homePage1.html" class="option">Home</a></li>
 				<li><a href="../../Image_Slider/animeWatchList/animeWatchList.html" class="option">Watchlist</a></li>
 				<li><a href="#" class="option">Contact</a></li>
-				<li><a href="#" class="option"><img src="profile.png"/><div id="circle"></div></a></li>
+				<li><a href="../../Login_Page/animeLoginPage/animeLoginPage.html" class="option">Login</a></li>
 			</ul>
 			<span class="slide"></span>
 		</nav>
 		<!--Fine Primo Menu-->
 		<br><br>
 		<h1>Gallery</h1>
-		<p>Here we present you a gallery of anime fan-art. Who knows, perhaps one of these could be your next profile pic...</p>
+		<p>Here we present you a gallery of anime fan-art. Who knows, perhaps one of these could be your next profile pic... </p>
 		<!--Inizio Menu Laterale-->
-		<aside>
-			<input type="checkbox" name="" id="">
-				<nav>
-					<a href="#" style="--i:1">Home</a>
-					<a href="#" style="--i:2">Services</a>
-					<a href="#" style="--i:3">About</a>
-					<a href="#" style="--i:4">Contact</a>
-				</nav>
-		</aside>
-			
 		<!--Fine Menu Laterale-->
 		<br>
-		<div class="modal-box invisible">
-			<div class="overlay"></div>
-			<div class="modal-box--image">
-				<img src="" alt="image here" />
+		<div id="container">
+			<div id="success-box">
+				<div class="dot"></div>
+				<div class="dot two"></div>
+				<div class="face">
+					<div class="eye"></div>
+					<div class="eye right"></div>
+					<div class = "mouth happy"></div>
+				</div>
+				<div class="shadow scale"></div>
+				<div class="message">
+					<h1 class="alert">Success!</h1>
+					<p>Yay, you discovered a new section!</p>
+				</div>
+				<button class="button-box">
+					<a class="green" href="../../Home_Page/homePage1/homePage1NoProfile.html">Go home</a>
+				</button>
 			</div>
-		</div>
-
-		<div class="wrapper">
-			<div class="parent-box">
-				<div class="image-box">
-					<img src="images/Draw3.png" alt="" />
-					<h1>Draw3</h1>
+			
+			<div id="error-box">
+				<div class="dot"></div>
+				<div class="dot two"></div>
+				<div class="face2">
+					<div class="eye"></div>
+					<div class="eye right"></div>
+					<div class = "mouth sad"></div>
 				</div>
-        
-				<div class="image-box">
-					<img src="images/Draw2.png" alt="" />
-					<h1>Draw2</h1>
+				<div class="shadow move"></div>
+				<div class="message">
+					<h1 class="alert">Error!</h1>
+					<p>Oh no, you're not registered yet...</p>
 				</div>
-        
-				<div class="image-box">
-					<img src="images/Draw2.png" alt="" />
-					<h1>Draw2</h1>
-				</div>
-        
-				<div class="image-box">
-					<img src="images/Draw3.png" alt="" />
-					<h1>Draw3</h1>
-				</div>
-        
-				<div class="image-box">
-					<img src="images/Draw4.png" alt="" />
-					<h1>Draw4</h1>
-				</div>
-        
-				<div class="image-box">
-					<img src="images/Draw5.png" alt="" />
-					<h1>Draw5</h1>
-				</div>
-        
-
+				<button class="button-box">
+					<a class="red" href="../../Login_Page/animeLoginPage/animeLoginPage.html">Login</a>
+				</button>
 			</div>
-    
 		</div>
 		<br><br><br>
 		<!--Contatti social-->

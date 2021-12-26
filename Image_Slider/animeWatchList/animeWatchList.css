@@ -94,7 +94,7 @@ a{
 	left: 0;
 	width: calc(410px / 4);
 	height: 4px;
-	background: orange;/*#9370DB;#3641b7;*/
+	background: #C11B17;/*#9370DB;#3641b7;*/
 	transition: .4s;
 	border-radius: 5px;
 }
@@ -463,7 +463,8 @@ svg circle{
 	padding-top: .25rem;
     padding-bottom: .25rem;
 	font-size: .875rem;
-	margin-bottom: .5rem;
+	margin-top: -31px;
+	margin-bottom: 8px;
     margin-left: 50%;
 	padding-left: .75rem;
     padding-right: .75rem;
@@ -473,4 +474,10 @@ svg circle{
 .riduci{
 	display: none;
 	margin-top: 10px;
+}
+
+.pageDescription{
+	font-family: 'Harukaze';
+	font-size: 44px;
+	color: white;
 }

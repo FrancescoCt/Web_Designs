@@ -1,3 +1,13 @@
+
+
+/*Parte della coolNavbar*/
+let options = document.querySelectorAll(".option");
+let slide = document.querySelector(".slide");
+options.forEach((ele,index)=>{
+	ele.addEventListener("mouseover",()=>{
+	slide.style.left = 100/options.length*index + "%"});
+});
+console.log("Hello")
 /*Parte di imageSlider2*/
 var modalBox = document.querySelector('.modal-box'),
     modalBoxImg = modalBox.querySelector('.modal-box--image'),
@@ -25,12 +35,3 @@ window.onkeydown = function (e) {
 
     }
 }
-
-/*Parte della coolNavbar*/
-let options = document.querySelectorAll(".option");
-let slide = document.querySelector(".slide");
-options.forEach((ele,index)=>{
-	ele.addEventListener("mouseover",()=>{
-	slide.style.left = 100/options.length*index + "%"});
-});
-console.log("Hello")
