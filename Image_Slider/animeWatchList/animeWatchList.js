@@ -16,10 +16,6 @@ function mostra(){
 	//oscuro il mostra ed evidenzio il riduci
 	this.style.display = "none";
 	this.parentNode.childNodes[3].style.display = "block";
-	//aggiusto il cardtitle
-	this.parentNode.childNodes[5].style.marginLeft = "60%";
-	this.parentNode.childNodes[3].style.marginTop = "-1%";
-	
 	
 }
 function riduci(){
@@ -27,9 +23,7 @@ function riduci(){
 	//oscuro il riduci ed evidenzio il mostra
 	this.style.display = "none";
 	this.parentNode.childNodes[1].style.display = "block";
-	//aggiusto il cardtitle
-	this.parentNode.childNodes[5].style.marginLeft = "60%";
-	this.parentNode.childNodes[1].style.marginTop = "-1%";
+	
 }
 
 mostraButtons.forEach(ele => {
@@ -40,4 +34,27 @@ mostraButtons.forEach(ele => {
 riduciButtons.forEach(ele => {
   //some code here
   ele.addEventListener("mouseover", riduci);
+});
+
+/*Parte per gestire il riempimento del cuore al click del preferito*/
+let cuori = document.querySelectorAll(".favourite");
+function aggiungiRimuoviPreferito(){
+	
+	//Aggiungi preferito
+	if (this.firstChild.classList[1] == "fa-heart-o"){
+		this.firstChild.classList.remove("fa", "fa-heart-o");
+		this.firstChild.classList.add("fa", "fa-heart");
+	}
+	//Rimuovi preferito
+	else if(this.firstChild.classList[1] == "fa-heart"){
+		this.firstChild.classList.remove("fa", "fa-heart");
+		this.firstChild.classList.add("fa", "fa-heart-o");
+	}
+	console.log(this.firstChild.classList);
+}
+
+cuori.forEach(ele => {
+  //some code here
+  ele.addEventListener("click", aggiungiRimuoviPreferito);
+  
 });

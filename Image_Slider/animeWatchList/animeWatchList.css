@@ -255,9 +255,6 @@ audio, canvas, embed, iframe, img, object, svg, video {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
-/*.px-6:hover{
-	display: none;
-}*/
 
 .py-4 {
 	display: none;
@@ -387,17 +384,20 @@ button{
     font-weight: 600;
 	color: white;
 	border: 0px solid #f56565;
-	border-radius: 9999px;
+	border-radius: 20px;
 	cursor: pointer;
-	padding-top: .25rem;
-    padding-bottom: .25rem;
+	padding-top: 3px;
+    padding-bottom: 3px;
 	font-size: .875rem;
 	margin-bottom: .5rem;
     margin-right: .5rem;
 	padding-left: .75rem;
     padding-right: .75rem;
+	
 }
-
+button:hover{
+	transform: scale(1.1);
+}
 
 /*Contatti Social*/
 .icon:hover:nth-child(2){
@@ -463,16 +463,22 @@ svg circle{
 	padding-top: .25rem;
     padding-bottom: .25rem;
 	font-size: .875rem;
-	margin-top: -31px;
+	margin-top: 10px;
 	margin-bottom: 8px;
-    margin-left: 50%;
+    margin-left: 40%;
 	padding-left: .75rem;
     padding-right: .75rem;
 	width: 100px;
 }
+.favourite{
+	margin-top: 10px;
+}
 
 .riduci{
 	display: none;
+	margin-top: 10px;/**/
+}
+.mostra{
 	margin-top: 10px;
 }
 
@@ -480,4 +486,14 @@ svg circle{
 	font-family: 'Harukaze';
 	font-size: 44px;
 	color: white;
+}
+.footerCard{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
 }
