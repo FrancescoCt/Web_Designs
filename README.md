@@ -9,6 +9,8 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 * To Do List
 * Login Page
 * Home Page
+* Speech to text
+
 ### Menu
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
@@ -61,6 +63,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
 | `homePage1` | _semplice landing page con video di sottofondo e menu basico da sviluppare meglio, collegamento a **animeGallery** e **animeWatchList**_  | **HTML+CSS+JS**|
+
 
 ## Browsers testati
 * Chrome
