@@ -1,0 +1,22 @@
+#results {
+  border: 1px solid #000;
+  width: 800px;
+  height: 200px;
+  margin: auto;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+#interim {
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 18px;
+  width: 800px;
+  margin: auto;
+}
+
+body {
+  text-align: center;
+}
