@@ -47,7 +47,7 @@ li img{
 #circle {
 	  position: absolute;
 	  top: 7px;
-		right: 30px;
+	  right: 30px;
       width: 10px;
       height: 10px;
       -webkit-border-radius: 10px;
@@ -55,6 +55,20 @@ li img{
       border-radius: 10px;
       background: #32cd32;
     }
+	
+#favouriteCircle{
+	position: absolute;
+	  top: 77px;
+	  right: 10px;/**/
+      width: 15px;
+      height: 15px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background: #32cd32;
+	  line-height: 15px; 
+	  font-size: 10px;
+}
 /*Parte di coolNavbar*/
 nav{
 	position: relative;
@@ -64,6 +78,7 @@ nav{
 	box-shadow: 0 6px 10px rgba(179, 179, 179, .5);
 	align-items: center;
 	border-radius: 10px;
+	margin-top: 15px;
 }
 
 ul{
@@ -187,12 +202,50 @@ body{
 }
 /*Parte delle cards*/
 
-/**, ::after, ::before {
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    border-color: #e2e8f0;
-}*/
+.card{
+	/*mt-5 ml-10;*/
+	margin-top: 1.25rem;
+	margin-left: 2.5rem;
+}
+.cardHeader{
+	/*max-w-sm rounded overflow-hidden shadow-2xl bg-gray-100*/
+	max-width: 24rem;
+	border-radius: .25rem;
+	overflow: hidden;
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+	--bg-opacity: 1;
+    background-color: #f7fafc;
+    background-color: rgba(247,250,252,var(--bg-opacity)); 
+}
+.cardDescription{
+	/*px-6 py-4*/
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	display: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+	
+}
+.cardDescriptionContent{
+	/*font-bold text-xl mb-2*/
+	font-weight: 700;
+	font-size: 1.25rem;
+	margin-bottom: .5rem;
+	line-height: 60px; 
+}
+.cardDescriptionP{
+	/*text-gray-700 text-base*/
+	--text-opacity: 1;
+	color: #4a5568;
+	color: rgba(74,85,104,var(--text-opacity));
+	font-size: 1rem;
+	margin-top: 20px;
+	margin-bottom: 25px;
+}
+.cardDescription span{
+	line-height: 23px;
+}
+
 .container{
 	display: flex;
 	flex-wrap: wrap;
@@ -200,46 +253,6 @@ body{
 	align-items: center;
 }
 
-.ml-10 {
-    margin-left: 2.5rem;
-}
-.mt-5 {
-    margin-top: 1.25rem;
-}
-.shadow-2xl {
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
-}
-.overflow-hidden {
-    overflow: hidden;
-}
-.max-w-sm {
-    max-width: 24rem;
-}
-.rounded {
-    border-radius: .25rem;
-}
-.bg-gray-100 {
-    --bg-opacity: 1;
-    background-color: #f7fafc;
-    background-color: rgba(247,250,252,var(--bg-opacity));
-}
-.shadow-2xl {
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
-}
-.overflow-hidden {
-    overflow: hidden;
-}
-.max-w-sm {
-    max-width: 24rem;
-}
-.rounded {
-    border-radius: .25rem;
-}
-.bg-gray-100 {
-    --bg-opacity: 1;
-    background-color: #f7fafc;
-    background-color: rgba(247,250,252,var(--bg-opacity));
-}
 .w-full {
     width: 100%;
 }
@@ -250,37 +263,6 @@ video {
 audio, canvas, embed, iframe, img, object, svg, video {
     display: block;
     vertical-align: middle;
-}
-.px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-.py-4 {
-	display: none;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.mb-2 {
-    margin-bottom: .5rem;
-}
-
-.text-xl {
-    font-size: 1.25rem;
-}
-.font-bold {
-    font-weight: 700;
-}
-
-.text-gray-700 {
-    --text-opacity: 1;
-    color: #4a5568;
-    color: rgba(74,85,104,var(--text-opacity));
-}
-
-.text-base {
-    font-size: 1rem;
 }
 blockquote, dd, dl, figure, h2, h3, h4, h5, h6, hr, p, pre {
     margin: 0;
@@ -380,7 +362,7 @@ blockquote, dd, dl, figure, h2, h3, h4, h5, h6, hr, p, pre {
     background-color: rgba(245,101,101,var(--bg-opacity));
 }
 button{
-	background-color: #f56565;
+	background-color: #f13535;/*#f56565;*/
     font-weight: 600;
 	color: white;
 	border: 0px solid #f56565;
@@ -400,6 +382,7 @@ button:hover{
 }
 
 /*Contatti Social*/
+
 .icon:hover:nth-child(2){
 	background: #1877f2;
 	box-shadow: 0 0 20px #1877f2;
@@ -454,8 +437,8 @@ svg circle{
 }
 
 .cardTitle{
-	font-family: 'Osake';
-	background-color: #f56565;
+	font-family: sans-serif;
+	background-color: #f13535;
     font-weight: 600;
 	color: white;
 	border: 0px solid #f56565;
@@ -465,10 +448,12 @@ svg circle{
 	font-size: .875rem;
 	margin-top: 10px;
 	margin-bottom: 8px;
-    margin-left: 40%;
+    margin-left: 10%;/**/
 	padding-left: .75rem;
     padding-right: .75rem;
-	width: 100px;
+	width: 177px;
+	height: 21px;
+	line-height: 24px;
 }
 .favourite{
 	margin-top: 10px;
@@ -495,5 +480,93 @@ svg circle{
     padding-bottom: .5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+
+}
+
+/*Parte del slow drop menu*/
+.dropbtn {
+  background-color: black;/*#4CAF50;*/
+  transition: 0.3s;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  align-items: center;
+}
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+  display: none;/**/
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: black;
+}
+/* Links inside the dropdown */
+
+.dropdown-content a {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 5px;
+	padding: 5px, 5px;
+	color: white;
+	/*padding: 12px 16px;*/
+	text-decoration: none;
+	display: block;
+	
+}
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: #f13535;/*#f1f1f1;*/
+  color: #000000;/*white;*/
+  border-radius: 10px;
+}
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: inline;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+  background-color: #C11B17;/*#3e8e41;*/
+  color: #000000;
+}
+.dropdown1 {
+  position: fixed;
+  top: 252px;
+  left: 2%;
+}
+.dropdown2 {
+  position: fixed;
+  top: 292px;
+  left: 2%;
+}
+.pageheading {
+  font-family: verdana;
+  font-size: 85%;
+  position: absolute;
+  left: 50px;
+  top: 210px;
+  background-color: #4CAF50;
+  border-radius: 6px;
+}
+/*Parte di image slider 2*/
+.wrapper {
+  width: 70%;
+  min-width: 710px;
+  max-width: 95%;
+  padding: 10px 0;
+  padding-top: 20px;
+  background: black;
+  border-radius: 10px;
+  /*border-top: 2px solid white;
+  border-bottom: 2px solid white;*/
+  box-shadow: 1px 3px 3px red;
 
 }

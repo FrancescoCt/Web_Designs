@@ -5,16 +5,16 @@
 		<link rel="shortcut icon" href="icon.ico">
 		<link rel="stylesheet" href= "../../css/font-awesome.min.css" />
 		<link rel="stylesheet" href= "animeWatchList.css" />
+		<script src="../../WatchListContent.js" defer></script>
 		<script src="animeWatchList.js" defer></script>
+		
 		<meta charset="UTF-8">
 	</head>
 	<body>
 	<header>
-		<img class="giphy-gif-img giphy-img-loaded" src="https://media1.giphy.com/media/b07clVdSOQcSY/200w.gif?cid=ecf05e47fvxezudpqdxwlk9r4wmd0tvxjqp99yd2c5qsbw9w&amp;rid=200w.gif&amp;ct=g">
-		<img class="giphy-gif-img giphy-img-loaded" src="https://media2.giphy.com/media/tyHabTw2DXeAU/200w.gif?cid=ecf05e47fvxezudpqdxwlk9r4wmd0tvxjqp99yd2c5qsbw9w&amp;rid=200w.gif&amp;ct=g">
-		<img class="giphy-gif-img giphy-img-loaded" src="https://media1.giphy.com/media/6XX4V0O8a0xdS/200w.gif?cid=ecf05e47yeocjcdhwj9joriehph9mxxlh524pdkvtb8poas3&amp;rid=200w.gif&amp;ct=g">
+		<h1>Anime Collection</h1>
 	</header>
-	<h1>Anime Collection</h1>
+	
 		<!--Inizio Primo Menu-->
 		<nav>
 			<ul>
@@ -27,110 +27,45 @@
 		</nav>
 		<!--Fine Primo Menu-->
 		<br><br>
-		<h1 id="titolo">WatchList</h1>
+		<!--Menu laterale-->
+		<aside>
+			<div class="dropdown">
+				<div class="dropdown1">
+					<button class="dropbtn">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+					<div class="dropdown-content">
+						<a href="#" id="comedySelector">Comedy </a>
+						<a href="#" id="fantasySelector">Fantasy </a>
+						<a href="#" id="romanticSelector">Romantic</a>
+						<a href="#" id="shonenSelector">Shonen</a>
+						<a href="#" id="sliceOfLifeSelector">Slice of life</a>
+						
+						<!--<a href="#" >Methane</a>
+						<a href="#" >Water Vapour</a>
+						<a href="#" >NF3</a>-->
+					</div>
+				</div>
+			</div>
+			<div class="dropdown">
+				<div class="dropdown2">
+					<button class="dropbtn">
+						<i class="fa fa-compass" aria-hidden="true"></i>
+					</button>
+					<div class="dropdown-content">
+						<a href="#" id="showAllSelector">Show all </a>
+						<a href="#" id="likedSelector">Liked <div id="favouriteCircle">0</div></a>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<!--Fine Menu laterale-->
+		<h1 id="titolo">WatchList - All</h1>
 		<p class="pageDescription">Here I present you my finest selection...</p>
-		<div class="container">
-	<!--Card 1-->
-		<div class="card mt-5 ml-10 ">  
-    
-    <div class="max-w-sm rounded overflow-hidden shadow-2xl bg-gray-100">
-      <img class="w-full" src="https://static.vecteezy.com/system/resources/previews/001/882/528/non_2x/beautiful-landscape-pine-forest-with-mesmerizing-mountain-views-free-vector.jpg" alt="Mountain">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Red Heaven</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="footerCard">
-        <button class="mostra"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
-        <button class="riduci"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
-		<button class="favourite"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-		<div class="cardTitle">Red Heaven</div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <!--Card 2-->
-  <div class="card mt-5 ml-10 ">
-  <div class="max-w-sm rounded overflow-hidden shadow-2xl bg-gray-100">
-      <img class="w-full" src="https://static.vecteezy.com/system/resources/previews/001/882/528/non_2x/beautiful-landscape-pine-forest-with-mesmerizing-mountain-views-free-vector.jpg" alt="Mountain">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Red Heaven</div>
-        <p class="text-gray-700 text-base">
-          This is just a copy, I wanted to check the disposition of multiple cards...
-        </p>
-      </div>
-      <div class="footerCard">
-        <button class="mostra"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
-        <button class="riduci"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
-		<button class="favourite"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-		<div class="cardTitle">Red Heaven</div>
-	</div>
-    </div>
-  </div>
-  <!--Card 3-->
-  <div class="card mt-5 ml-10 ">
-  <div class="max-w-sm rounded overflow-hidden shadow-2xl bg-gray-100">
-      <img class="w-full" src="https://static.vecteezy.com/system/resources/previews/001/882/528/non_2x/beautiful-landscape-pine-forest-with-mesmerizing-mountain-views-free-vector.jpg" alt="Mountain">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Red Heaven</div>
-        <p class="text-gray-700 text-base">
-          This is just a copy, I wanted to check the disposition of multiple cards...
-        </p>
-      </div>
-      <div class="footerCard">
-        <button class="mostra"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
-        <button class="riduci"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
-		<button class="favourite"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-		<div class="cardTitle">Red Heaven</div>
-	</div>
-    </div>
-  </div>
-  
-  <!--Card 4-->
-  <div class="card mt-5 ml-10 ">
-  <div class="max-w-sm rounded overflow-hidden shadow-2xl bg-gray-100">
-      <img class="w-full" src="https://static.vecteezy.com/system/resources/previews/001/882/528/non_2x/beautiful-landscape-pine-forest-with-mesmerizing-mountain-views-free-vector.jpg" alt="Mountain">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Red Heaven</div>
-        <p class="text-gray-700 text-base">
-          This is just a copy, I wanted to check the disposition of multiple cards...
-        </p>
-      </div>
-      <div class="footerCard">
-        <button class="mostra"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
-        <button class="riduci"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
-		<button class="favourite"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-		<div class="cardTitle">Red Heaven</div>
-		</div>
-    </div>
-  </div>
-  <!--Card 5-->
-  <div class="card mt-5 ml-10 ">
-  <div class="max-w-sm rounded overflow-hidden shadow-2xl bg-gray-100">
-      <img class="w-full" src="https://static.vecteezy.com/system/resources/previews/001/882/528/non_2x/beautiful-landscape-pine-forest-with-mesmerizing-mountain-views-free-vector.jpg" alt="Mountain">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Red Heaven</div>
-        <p class="text-gray-700 text-base">
-          This is just a copy, I wanted to check the disposition of multiple cards...
-        </p>
-      </div>
-      <div class="footerCard">
-        <button class="mostra"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
-        <button class="riduci"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
-		<button class="favourite"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
-		<div class="cardTitle">Red Heaven</div>
-		</div>
-    </div>
-  </div>
-  </div>
-  <!--End Card 5-->
-  
-  
-	</div>
+		
 		<br><br><br>
 		<!--Contatti social-->
-		<h1>Contacts</h1>
+		<h1 id='contacts'>Contacts</h1>
 		<div class = "main">
 		
 			<div class="icon">
