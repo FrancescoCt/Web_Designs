@@ -31,6 +31,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | `googleMapsRadioButton` | _Rappresentazione bottoni "Driving", "Ciclying" e "Walking" in stile Google Maps_  | **HTML+CSS**|
 | `flashButton` | _Container con messaggio di successo o di errore con animazione simpatica_  | **HTML+CSS**|
 | `cards1` | _Disposizione verticale di carte/post stile instagram, tema rosso-arancio, immagini e testo personalizzabili_  | **HTML+CSS**|
+| `profileCard` | _Esempio di carta di presentazione con link utili ai social dello sviluppatore_  | **HTML+CSS**|
 
 ### Image_Slider
 | Project       | Description   | Languages|
