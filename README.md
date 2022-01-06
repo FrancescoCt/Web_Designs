@@ -10,6 +10,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 * Login Page
 * Home Page
 * Speech to text
+* Search Bar
 
 ### Menu
 | Project       | Description   | Languages|
@@ -64,6 +65,12 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
 | `homePage1` | _semplice landing page con video di sottofondo e menu basico da sviluppare meglio, collegamento a **animeGallery** e **animeWatchList**_  | **HTML+CSS+JS**|
+
+### Search_Bar
+| Project       | Description   | Languages|
+| ------------- | ------------- | ------------- | 
+| `interactiveSearch` | _icona di ricerca che si trasforma in entry search string con bottone, light/dark theme_  | **HTML+CSS**|
+
 
 
 ## Browsers testati
