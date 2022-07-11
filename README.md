@@ -11,6 +11,7 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 * Home Page
 * Speech to text
 * Search Bar
+* Maps
 
 ### Menu
 | Project       | Description   | Languages|
@@ -70,6 +71,18 @@ _Raccolta di stili per classici elementi di web pages quali menu, login, homepag
 | Project       | Description   | Languages|
 | ------------- | ------------- | ------------- | 
 | `interactiveSearch` | _icona di ricerca che si trasforma in entry search string con bottone, light/dark theme_  | **HTML+CSS**|
+
+### Maps
+| Project       | Description   | Languages|
+| ------------- | ------------- | ------------- | 
+| `mappa_Gallia` | _Mappa della Gallia Romana suddivisa in province conquistabili_  | **HTML+CSS+JSS**|
+| `mappa_Ellas` | _Mappa della Grecia arcaica suddivisa in province conquistabili_  | **HTML+CSS+JSS**|
+| `mappa_Europa_romana` | _Mappa dell'europa Romana suddivisa in province conquistabili_  | **HTML+CSS+JSS**|
+
+### Chat Bot GUI 0
+| Project       | Description   | Languages|
+| ------------- | ------------- | ------------- | 
+| `chatbot1` | _semplice grafica per interazione con bot per chat_  | **HTML+CSS+JSS**|
 
 
 
