@@ -1,0 +1,564 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@font-face {
+	font-family: 'Harukaze';
+	src: url('../specialFonts/HarukazeSolid-X3Wp9.ttf');
+}
+@font-face{
+	font-family: 'Osake';
+	src: url('../specialFonts/Osake-x3oqj.otf');
+}
+@font-face{
+	font-family: 'JapanDesign';
+	src: url('../specialFonts/JapaneseDesigns-3mKM.ttf');
+}
+:root{
+	--body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);/**/
+	--msger-bg: #fff;
+	--left-msg-bg: linar-gradient(to right, #f895b9 #f44183);
+	--right-msg-bg: #ececec;
+	--color-page: orange;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgb(42, 42, 42);
+}
+/*Parte del menu di gioco*/
+/**/video{
+	position: absolute;
+	z-index: 0;
+	left: 0;
+}
+.container1, .map-image{
+	border: solid 2px var(--color-page);
+	border-radius: 10px;
+}
+
+/*Parte del slow drop menu*/
+.dropbtn {
+  background-color: black;/*#4CAF50;*/
+  transition: 0.3s;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  align-items: center;
+}
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+  display: none;/**/
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  min-height: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: black;
+  z-index: 5;
+  margin-left: 2px;
+}
+/* Links inside the dropdown */
+
+.dropdown-content a {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 5px;
+	padding: 5px, 5px;
+	color: white;
+	padding: 12px 16px;/**/
+	text-decoration: none;
+	display: block;
+	z-index: 2;
+}
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: var(--color-page);/*#9370DB;#f1f1f1;*/
+  color: white;/*#000000;*/
+  border-radius: 10px;
+}
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: inline;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+  background-color: var(--color-page);/*#3e8e41;*/
+  color: white;
+}
+.dropdown1 {
+  position: fixed;
+  top: 252px;
+  left: 2%;
+  z-index: 5;
+}
+.dropdown2 {
+  position: fixed;
+  top: 292px;
+  left: 2%;
+  z-index: 5;
+}
+
+/*Parte della mappa*/
+
+.region{
+	fill:'FFFFFF';
+	stroke:#dece0c;
+	/*stroke-width: 4px;*/
+	transition: fill 0.3s;
+	opacity: 0.4;
+}
+#empiremap :hover{
+	fill: '000';
+}
+.regionDiv{
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-radius: 60px;
+	border: solid black 1px;
+	background: red;
+	/*top: 200px;
+	left: 200px;
+	display: none;*/
+
+}
+
+#suebia_setidava{
+	top: 140px;
+	left: 274px;
+}
+#hispania_numantia{
+	top: 387px;
+	left: 96px;
+}
+#transoxania_maracanda{
+	top: 337px;
+	left: 802px;
+}
+#transoxania_bukhara{
+	top: 337px;
+	left: 802px;
+}
+#thracia_pulpudeva{
+	top: 309px;
+	left: 412px;
+}
+#thracia_odessos{
+	top: 309px;
+	left: 412px;
+}
+#thracia_naissos{
+	top: 309px;
+	left: 412px;
+}
+#thracia_antheia{
+	top: 309px;
+	left: 412px;
+}
+#tarraconensis_aracillum{
+	top: 329px;
+	left: 138px;
+}
+#tarraconensis_brigantium{
+	top: 329px;
+	left: 138px;
+}
+#tarraconensis_tarraco{
+	top: 329px;
+	left: 138px;
+}
+#syria_antioch{
+	top: 397px;
+	left: 515px;
+}
+#syria_samosata{
+	top: 397px;
+	left: 515px;
+}
+#syria_tarsus{
+	top: 397px;
+	left: 515px;
+}
+#syria_thapsacus{
+	top: 397px;
+	left: 515px;
+}
+#suebia_calancorum{
+	top: 140px;
+	left: 274px;
+}
+#sicily_syracuse{
+	top: 377px;
+	left: 265px;
+}
+#sicily_panormus{
+	top: 377px;
+	left: 265px;
+}
+#sicily_agrigentum{
+	top: 377px;
+	left: 265px;
+}
+#scythia_siracena{
+	top: 271px;
+	left: 612px;
+}
+#scythia_samandar{
+	top: 271px;
+	left: 612px;
+}
+#scythia_gelonus{
+	top: 271px;
+	left: 612px;
+}
+#scythia_sarai{
+	top: 271px;
+	left: 612px;
+}
+#sarmatia_olbia{
+	top: 222px;
+	left: 443px;
+}
+#sarmatia_melgunov{
+	top: 222px;
+	left: 443px;
+}
+#sarmatia_solokha{
+	top: 222px;
+	left: 443px;
+}
+#raetia_et_noricum_octoduris{
+	top: 226px;
+	left: 281px;
+}
+#raetia_et_noricum_noreia{
+	top: 226px;
+	left: 281px;
+}
+#raetia_et_noricum_koria{
+	top: 226px;
+	left: 281px;
+}
+#raetia_et_noricum_kelheim{
+	top: 226px;
+	left: 281px;
+}
+#pretanic_isles_elbana{
+	top: 98px;
+	left: 106px;
+}
+#pretanic_isles_eilodon{
+	top: 98px;
+	left: 106px;
+}
+#pretanic_isles_stanwick{
+	top: 98px;
+	left: 106px;
+}
+#phazania_garama{
+	top: 500px;
+	left: 283px;
+}
+#phazania_cydamus{
+	top: 500px;
+	left: 283px;
+}
+#persis_susa{
+	top: 492px;
+	left: 672px;
+}
+#persis_persepolis{
+	top: 492px;
+	left: 672px;
+}
+#persis_gor{
+	top: 492px;
+	left: 672px;
+}
+#parthia_hekatompylos{
+	top: 425px;
+	left: 687px;
+}
+#parthia_susia{
+	top: 425px;
+	left: 687px;
+}
+#parthia_nisa{
+	top: 425px;
+	left: 687px;
+}
+#parthia_zadrakata{
+	top: 425px;
+	left: 687px;
+}
+#pannonia_aquincum{
+	top: 225px;
+	left: 336px;
+}
+#pannonia_segestica{
+	top: 225px;
+	left: 336px;
+}
+#pannonia_singidun{
+	top: 225px;
+	left: 336px;
+}
+#palmyra_palmyra{
+	top: 435px;
+	left: 528px;
+}
+#palmyra_dura{
+	top: 435px;
+	left: 528px;
+}
+#numidia_capsa{
+	top: 424px;
+	left: 128px;
+}
+#numidia_cirta{
+	top: 424px;
+	left: 128px;
+}
+#numidia_dimmidi{
+	top: 424px;
+	left: 128px;
+}
+#numidia_iol{
+	top: 424px;
+	left: 128px;
+}
+#narbonensis_massilia{
+	top: 286px;
+	left: 176px;
+}
+#narbonensis_tolosa{
+	top: 286px;
+	left: 176px;
+}
+#narbonensis_narbo{
+	top: 286px;
+	left: 176px;
+}
+#nabataea_petra{
+	top: 502px;
+	left: 507px;
+}
+#nabataea_hegra{
+	top: 502px;
+	left: 507px;
+}
+#nabataea_charmuthas{
+	top: 502px;
+	left: 507px;
+}
+#mesopotamia_hatra{
+	top: 460px;
+	left: 614px;
+}
+#mesopotamia_edessa{
+	top: 460px;
+	left: 614px;
+}
+#mesopotamia_ctesiphon{
+	top: 460px;
+	left: 614px;
+}
+#media_magna_phraaspa{
+	top: 386px;
+	left: 614px;
+}
+#media_magna_gazaca{
+	top: 386px;
+	left: 614px;
+}
+#media_magna_ekbatana{
+	top: 386px;
+	left: 614px;
+}
+#media_magna_arsakia{
+	top: 386px;
+	left: 614px;
+}
+#mauretania_tingis{
+	top: 428px;
+	left: 55px;
+}
+#mauretania_rutubis{
+	top: 428px;
+	left: 55px;
+}
+#mauretania_siga{
+	top: 428px;
+	left: 55px;
+}
+#magna_germania_tulifurdum{
+	top: 150px;
+	left: 216px;
+}
+#magna_germania_treva{
+	top: 150px;
+	left: 216px;
+}
+#magna_germania_flevium{
+	top: 150px;
+	left: 216px;
+}
+#macedonia_thessalonica{
+	top: 339px;
+	left: 333px;
+}
+#macedonia_pharsalus{
+	top: 339px;
+	left: 333px;
+}
+#macedonia_apollonia{
+	top: 339px;
+	left: 333px;
+}
+#lusitania_olisipo{
+	top: 348px;
+	left: 50px;
+}
+#lusitania_ebora{
+	top: 348px;
+	left: 50px;
+}
+#lusitania_ebora{
+	top: 348px;
+	left: 50px;
+}
+#lugii_grinev{
+	top: 167px;
+	left: 397px;
+}
+#lugii_carrodunum{
+	top: 167px;
+	left: 397px;
+}
+#lugii_arsenium{
+	top: 167px;
+	left: 397px;
+}
+#libya_paraitonion{}
+#libya_cyrene{}
+#libya_augila{}
+#libya_ammonium{}
+#latium_roma{}
+#latium_asculum{}
+#latium_arretium{}
+#latium_ariminium{}
+#judea_tyros{}
+#judea_salamis{}
+#judea_jerusalem{}
+#aegyptos_alexandria{}
+#italia_cosentia{}
+#italia_brundisium{}
+#italia_beneventum{}
+#illyricum_salona{}
+#illyricum_narona{}
+#illyricum_dyrrachium{}
+#{}
+#hispania_saguntum{}
+#hispania_nova_carthago{}
+#hispania_ibossim{}
+#hispania_ibossim{}
+#hispania_ibossim{}
+#germania_minor_vesonto{}
+#germania_minor_bavay{}
+#corsica_et_sardinia_caralis{}
+#corsica_et_sardinia_aleria{}
+#cisalpina_patavium{}
+#caucasia_gabata{}
+#carmania_bam{}
+#britannia_mordiunon{}
+#britannia_iska{}
+#bosporus_panticapaeum{}
+#bithynia_et_pontus_trapezos{}
+#bithynia_et_pontus_nicomedia{}
+#asia_rhodos{}
+#achaia_sparta{}
+#achaia_gortyna{}
+#achaia_athenae{}
+#armenia_tigranocerta{}
+#armenia_artaxa{}
+#gedrosia_phrada{}
+#chorasmia_akhur{}
+#britannia_sleaford{}
+#britannia_camulodunum{}
+#suebia_pelplin{}
+#suebia_virunium{}
+#{}
+#hercynia_bergium{}
+#belgica_nemecatum{}
+#belgica_treverorum{}
+#gallia_iuliobana{}
+#gallia_darioritum{}
+#gallia_cenabum{}
+#gallia_bibracte{}
+#aquitania_limonum{}
+#aquitania_gergovia{}
+#aquitania_burdigala{}
+#baetica_toletum{}
+#baetica_corduba{}
+#baetica_gades{}
+#cisalpina_genua{}
+#cisalpina_mediolanium{}
+#hercynia_budorgis{}
+#hercynia_istros{}
+#dacia_petrodava{}
+#dacia_zarmizegetusa{}
+#dacia_pelendava{}
+#dacia_piscul{}
+#asia_pergamum{}
+#asia_ephesus{}
+#asia_pessinus{}
+#bithynia_et_pontus_sinope{}
+#bosporus_tanais{}
+#bosporus_phanagoria{}
+#galatia_et_cappadocia_side{}
+#galatia_et_cappadocia_iconium{}
+#galatia_et_cappadocia_mazaca{}
+#galatia_et_cappadocia_ancyra{}
+#bithynia_et_pontus_amaseia{}
+#armenia_arsamosata{}
+#armenia_carana{}
+#caucasia_mtskheta{}
+#caucasia_phasis{}
+#chorasmia_aktau{}
+#bactria_eucratides{}
+#bactria_baktria{}
+#bactria_kapisene{}
+#aria_amul{}
+#aria_merv{}
+#aria_artacoana{}
+#gedrosia_oraea{}
+#gedrosia_pura{}
+#carmania_harmozia{}
+#{}
+#mesopotamia_charax{}
+#arabia_felix_maas_gat{}
+#arabia_felix_marib{}
+#arabia_felix_eudaemon{}
+#arabia_magna_gerrha{}
+#arabia_magna_yathrib{}
+#arabia_magna_adummatu{}
+#africa_carthago{}
+#africa_hadrumentum{}
+#{}
+#africa_leptis_magna{}
+#africa_leptis_magna2{}
+#{}
+#aegyptos_myos_hormos{}
+#aegyptos_memphis{}
+#aegyptos_diospolis{}
+#aethiopia_ptolemais_theron{}
+#aethiopia_meroe{}
+#aethiopia_aksum{}

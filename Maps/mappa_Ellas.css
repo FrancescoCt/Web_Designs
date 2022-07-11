@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@font-face {
+	font-family: 'Harukaze';
+	src: url('../specialFonts/HarukazeSolid-X3Wp9.ttf');
+}
+@font-face{
+	font-family: 'Osake';
+	src: url('../specialFonts/Osake-x3oqj.otf');
+}
+@font-face{
+	font-family: 'JapanDesign';
+	src: url('../specialFonts/JapaneseDesigns-3mKM.ttf');
+}
+:root{
+	--body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);/**/
+	--msger-bg: #fff;
+	--left-msg-bg: linar-gradient(to right, #f895b9 #f44183);
+	--right-msg-bg: #ececec;
+	--color-page: orange;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgb(42, 42, 42);
+}
+/*Parte del menu di gioco*/
+/**/video{
+	position: absolute;
+	z-index: 0;
+	left: 0;
+}
+.container1, .map-image{
+	border: solid 2px var(--color-page);
+	border-radius: 10px;
+}
+
+/*Parte del slow drop menu*/
+.dropbtn {
+  background-color: black;/*#4CAF50;*/
+  transition: 0.3s;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  align-items: center;
+}
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+  display: none;/**/
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  min-height: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: black;
+  z-index: 5;
+  margin-left: 2px;
+}
+/* Links inside the dropdown */
+
+.dropdown-content a {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 5px;
+	padding: 5px, 5px;
+	color: white;
+	padding: 12px 16px;/**/
+	text-decoration: none;
+	display: block;
+	z-index: 2;
+}
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: var(--color-page);/*#9370DB;#f1f1f1;*/
+  color: white;/*#000000;*/
+  border-radius: 10px;
+}
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: inline;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+  background-color: var(--color-page);/*#3e8e41;*/
+  color: white;
+}
+.dropdown1 {
+  position: fixed;
+  top: 252px;
+  left: 2%;
+  z-index: 5;
+}
+.dropdown2 {
+  position: fixed;
+  top: 292px;
+  left: 2%;
+  z-index: 5;
+}
+
+/*Parte della mappa*/
+
+.region{
+	fill:'FFFFFF';
+	stroke:#dece0c;
+	/*stroke-width: 4px;*/
+	transition: fill 0.3s;
+	opacity: 0.4;
+}
+#spartamap :hover{
+	fill: '000';
+}
+.regionDiv{
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-radius: 60px;
+	border: solid black 1px;
+	display: none;
+
+}
+#kalkidike_mende{
+	top: 145px;
+	left: 328px;
+}
+#kalkidike_torone{
+	top: 145px;
+	left: 328px;
+	
+}
+#kalkidike_olinthos{
+	top: 145px;
+	left: 328px;
+}
+#makedon_dion{
+	top: 166px;
+	left: 210px;
+}
+#makedon_aigai{
+	top: 166px;
+	left: 210px;
+}
+#makedon_arnisa{
+	top: 166px;
+	left: 210px;
+}
+#makedon_argos_orestiko{
+	top: 166px;
+	left: 210px;
+}
+#epeiros_antigonia{
+	top: 217px;
+	left: 110px;
+}
+#epeiros_dodona{
+	top: 217px;
+	left: 110px;
+}
+#epeiros_korkyra{
+	top: 217px;
+	left: 110px;
+}
+#epeiros_elaea{
+	top: 217px;
+	left: 110px;
+}
+#thessaly_larisa{
+	top: 271px;
+	left: 220px;
+}
+#thessaly_pherae{
+	top: 271px;
+	left: 220px;
+}
+#thessaly_pharsalos{
+	top: 271px;
+	left: 220px;
+}
+#boiotia_lamia{
+	top: 356px;
+	left: 275px;
+	
+}
+#boiotia_delphi{
+	top: 356px;
+	left: 275px;
+}
+#boiotia_opos{
+	top: 356px;
+	left: 275px;
+}
+#boiotia_thebai{
+	top: 356px;
+	left: 275px;
+}
+#ambrakia_ambrakia{
+	top: 313px;
+	left: 156px;
+}
+#ambrakia_anaktorio{
+	top: 313px;
+	left: 156px;
+}
+#ambrakia_pronnoi{
+	top: 313px;
+	left: 156px;
+}
+#aitolia_thermon{
+	top: 340px;
+	left: 196px;
+}
+#aitolia_naupaktos{
+	top: 340px;
+	left: 196px;
+}
+#elis_zakynthos{
+	top: 383px;
+	left: 196px;
+}
+#elis_patrai{
+	top: 383px;
+	left: 196px;
+}
+#elis_elis{
+	top: 383px;
+	left: 196px;
+}
+#elis_olympia{
+	top: 383px;
+	left: 196px;
+}
+#euboia_oreos{
+	top: 383px;
+	left: 377px;
+}
+#euboia_kalkis{
+	top: 383px;
+	left: 377px;
+}
+#euboia_karystos{
+	top: 383px;
+	left: 377px;
+}
+#euboia_andros{
+	top: 383px;
+	left: 377px;
+}
+#lakedaimon_pylos{
+	top: 488px;
+	left: 248px;
+}
+#lakedaimon_messenia{
+	top: 488px;
+	left: 248px;
+}
+#lakedaimon_sparta{
+	top: 488px;
+	left: 248px;
+}
+#lakedaimon_kythera{
+	top: 488px;
+	left: 248px;
+}
+#lakedaimon_kythera{
+	top: 488px;
+	left: 248px;
+}
+#argolis_mantinea{
+	top: 428px;
+	left: 248px;
+}
+#argolis_korinthos{
+	top: 428px;
+	left: 248px;
+}
+#argolis_argos{
+	top: 428px;
+	left: 248px;
+}
+#argolis_melos{
+	top: 428px;
+	left: 248px;
+}
+#attike_athenai{
+	top: 398px;
+	left: 341px;
+}
+#attike_laviro{
+	top: 398px;
+	left: 341px;
+}
+#attike_paros{
+	top: 398px;
+	left: 341px;
+}
+#attike_naxos{
+	top: 398px;
+	left: 341px;
+}
+#dodekanisa_kos{
+	top: 544px;
+	left: 619px;
+}
+#dodekanisa_rodos{
+	top: 544px;
+	left: 619px;
+}
+#dodekanisa_lindos{
+	top: 544px;
+	left: 619px;
+}
+#dodekanisa_karpathos{
+	top: 544px;
+	left: 619px;
+}
+#krete_kydonia{
+	top: 656px;
+	left: 448px;
+}
+#krete_gortyna{
+	top: 656px;
+	left: 448px;
+}
+#krete_knossos{
+	top: 656px;
+	left: 448px;
+}
+#karia_xanthos{
+	top: 491px;
+	left: 712px;
+}
+#karia_phaselis{
+	top: 491px;
+	left: 712px;
+}
+#karia_kibyra{
+	top: 491px;
+	left: 712px;
+}
+#karia_kolossai{
+	top: 491px;
+	left: 712px;
+}
+#ionia_knidos{
+	top: 428px;
+	left: 560px;
+}
+#ionia_halikarnassos{
+	top: 428px;
+	left: 560px;
+}
+#ionia_miletos{
+	top: 428px;
+	left: 560px;
+}
+#ionia_ephesos{
+	top: 428px;
+	left: 560px;
+}
+#lydia_sardeis{
+	top: 336px;
+	left: 560px;
+}
+#lydia_smyrna{
+	top: 336px;
+	left: 560px;
+}
+#aigian_samos{
+	top: 292px;
+	left: 500px;
+}
+#aigian_oinoi{
+	top: 292px;
+	left: 500px;
+}
+#aigian_khios{
+	top: 292px;
+	left: 500px;
+}
+#aigian_mytilene{
+	top: 292px;
+	left: 500px;
+}
+#mysia_myrina{
+	top: 172px;
+	left: 540px;
+}
+#mysia_pergamon{
+	top: 172px;
+	left: 540px;
+}
+#mysia_ilion{
+	top: 172px;
+	left: 540px;
+}
+#mysia_kyzikos{
+	top: 172px;
+	left: 540px;
+}
+#hellespontos_sestos{
+	top: 92px;
+	left: 642px;
+}
+#hellespontos_perinthos{
+	top: 92px;
+	left: 642px;
+}
+#hellespontos_perinthos{
+	top: 92px;
+	left: 642px;
+}
+#hellespontos_kypsela{
+	top: 92px;
+	left: 642px;
+}
+#thraike_0{
+	top: 104px;
+	left: 440px;
+}
+#thraike_1{
+	top: 104px;
+	left: 440px;
+}
+#thraike_maroneia{
+	top: 104px;
+	left: 440px;
+}
+#thraike_abdera{
+	top: 104px;
+	left: 440px;
+}
+#amphipolis_krinides{
+	top: 118px;
+	left: 353px;
+}
+#amphipolis_amphipolis{
+	top: 118px;
+	left: 353px;
+}
+/*Draggable element*/
+.division {
+  position: absolute;
+  z-index: 9;
+  background-color: rgb(42, 42, 42);
+  border: 1px solid orange;
+  text-align: center;
+  border-radius: 60px;
+}
+
+.divisionheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  border-radius: 60px;
+  background-image:url('spartan.png');
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+	border-radius: 60px;
+}
+.divisionCount{
+	background-color: rgb(42, 42, 42);
+	border-radius: 100px;
+	border: solid green 1px;
+	color: white;
+	width: 15px;
+    height: 16px;
+}

@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@font-face {
+	font-family: 'Harukaze';
+	src: url('../specialFonts/HarukazeSolid-X3Wp9.ttf');
+}
+@font-face{
+	font-family: 'Osake';
+	src: url('../specialFonts/Osake-x3oqj.otf');
+}
+@font-face{
+	font-family: 'JapanDesign';
+	src: url('../specialFonts/JapaneseDesigns-3mKM.ttf');
+}
+:root{
+	--body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);/**/
+	--msger-bg: #fff;
+	--left-msg-bg: linar-gradient(to right, #f895b9 #f44183);
+	--right-msg-bg: #ececec;
+	--color-page: orange;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgb(42, 42, 42);
+}
+/*Parte del menu di gioco*/
+/**/video{
+	position: absolute;
+	z-index: 0;
+	left: 0;
+}
+/*Parte del slow drop menu*/
+.dropbtn {
+  background-color: black;/*#4CAF50;*/
+  transition: 0.3s;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  align-items: center;
+}
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+  display: none;/**/
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  min-height: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: black;
+  z-index: 5;
+  margin-left: 2px;
+}
+/* Links inside the dropdown */
+
+.dropdown-content a {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 5px;
+	padding: 5px, 5px;
+	color: white;
+	padding: 12px 16px;/**/
+	text-decoration: none;
+	display: block;
+	z-index: 2;
+}
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: var(--color-page);/*#9370DB;#f1f1f1;*/
+  color: white;/*#000000;*/
+  border-radius: 10px;
+}
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: inline;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+  background-color: var(--color-page);/*#3e8e41;*/
+  color: white;
+}
+.dropdown1 {
+  position: fixed;
+  top: 252px;
+  left: 2%;
+  z-index: 5;
+}
+.dropdown2 {
+  position: fixed;
+  top: 292px;
+  left: 2%;
+  z-index: 5;
+}
+
+/*Parte della mappa*/
+
+.region{
+	fill:'FFFFFF';
+	stroke:#dece0c;
+	/*stroke-width: 4px;*/
+	transition: fill 0.3s;
+	opacity: 0.4;
+}
+#gaulmap :hover{
+	fill: '000';
+}
+.regionDiv{
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-radius: 60px;
+	border: solid black 1px;
+	display: none;
+	
+}
+#britannia_iska{
+	top: 130px;
+	left: 117px;
+	
+}
+#britannia_venta_belgarum {
+	top: 80px;
+	left: 228px;
+	
+}
+#britannia_durovernon{
+	top: 94px;
+	left: 312px;
+	
+}
+#aremorica_vorgion{
+	top: 253px;
+	left: 112px;
+	
+}
+#aremorica_darioritum{
+	top: 297px;
+	left: 181px;
+	
+}
+#aremorica_condate{
+	top: 262px;
+	left: 231px;
+	
+}
+#aremorica_namnetum{
+	top: 346px;
+	left: 218px;
+	
+}
+#lutetia_crociatonum{
+	top: 218px;
+	left: 261px;
+	
+}
+#lutetia_lexovion{
+	top: 233px;
+	left: 355px;
+	
+}
+#lutetia_suindinum{
+	top: 287px;
+	left: 296px;
+	
+}
+#lutetia_cenabum{
+	top: 307px;
+	left: 410px;
+	
+}
+#silva_carbonaria_gesoriacum{
+	top: 107px;
+	left: 424px;
+	
+}
+#silva_carbonaria_nemetocenna{
+	top: 131px;
+	left: 447px;
+	
+}
+#silva_carbonaria_bratuspantion{
+	top: 180px;
+	left: 358px;
+	
+}
+#senonia_lutetia{
+	top: 215px;
+	left: 438px;
+	
+}
+#senonia_agedineum{
+	top: 287px;
+	left: 457px;
+	
+}
+#senonia_alesia{
+	top: 297px;
+	left: 518px;
+	
+}
+#germania_inferior_atuatuca{
+	top: 73px;
+	left: 560px;
+	
+}
+#germania_inferior_bagacum{
+	top: 159px;
+	left: 540px;
+	
+}
+#arduenna_silva_noviodunon{
+	top: 197px;
+	left: 488px;
+	
+}
+#arduenna_silva_durocorteron{
+	top: 234px;
+	left: 537px;
+	
+}
+#arduenna_silva_treverorum{
+	top: 175px;
+	left: 632px;
+	
+}
+#arduenna_silva_divoduron{
+	top: 233px;
+	left: 606px;
+	
+}
+#silva_nigra_noviiomagos{
+	top: 233px;
+	left: 646px;
+	
+}
+#silva_nigra_uburzis{
+	top: 204px;
+	left: 748px;
+	
+}
+#silva_nigra_argentorate{
+	top: 276px;
+	left: 689px;
+	
+}
+#maxima_sequanorum_vesontio{
+	top: 270px;
+	left: 572px;
+	
+}
+#maxima_sequanorum_rauricon{
+	top: 324px;
+	left: 611px;
+	
+}
+#lugdunensis_bibracte{
+	top: 364px;
+	left: 529px;
+	
+}
+#lugdunensis_vienna{
+	top: 455px;
+	left: 509px;
+	
+}
+#helvetia_octoduron{
+	top: 408px;
+	left: 600px;
+	
+}
+#helvetia_turicum{
+	top: 356px;
+	left: 728px;
+	
+}
+#insubria_vercelum{
+	top: 446px;
+	left: 607px;
+	
+}
+#insubria_medhlan{
+	top: 413px;
+	left: 747px;
+	
+}
+#liguria_pollentia{
+	top: 516px;
+	left: 627px;
+	
+}
+#liguria_genua{
+	top: 490px;
+	left: 739px;
+	
+}
+#transalpina_vasio{
+	top: 500px;
+	left: 545px;
+	
+}
+#transalpina_massalia{
+	top: 563px;
+	left: 545px;
+	
+}
+#gergovia_avaricon{
+	top: 379px;
+	left: 422px;
+	
+}
+#gergovia_durotincon{
+	top: 445px;
+	left: 358px;
+	
+}
+#gergovia_nemossos{
+	top: 445px;
+	left: 442px;
+	
+}
+#pictavis_ambatia{
+	top: 334px;
+	left: 364px;
+	
+}
+#pictavis_lemonum{
+	top: 374px;
+	left: 300px;
+	
+}
+#pictavis_mediolanum_santonum{
+	top: 437px;
+	left: 300px;
+	
+}
+#aquitania_burdigala{
+	top: 485px;
+	left: 310px;
+	
+}
+#aquitania_sotium{
+	top: 506px;
+	left: 259px;
+	
+}
+#aquitania_aquae_tarbellicae{
+	top: 538px;
+	left: 259px;
+	
+}
+#aquitania_elimberris{
+	top: 558px;
+	left: 300px;
+	
+}
+#narbonensis_divona{
+	top: 499px;
+	left: 385px;
+	
+}
+#narbonensis_segodunum{
+	top: 515px;
+	left: 433px;
+	
+}
+#narbonensis_tolosa{
+	top: 563px;
+	left: 383px;
+	
+}
+#narbonensis_narbo_martius{
+	top: 585px;
+	left: 433px;
+	
+}

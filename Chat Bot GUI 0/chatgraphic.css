@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@font-face {
+	font-family: 'Harukaze';
+	src: url('../specialFonts/HarukazeSolid-X3Wp9.ttf');
+}
+@font-face{
+	font-family: 'Osake';
+	src: url('../specialFonts/Osake-x3oqj.otf');
+}
+@font-face{
+	font-family: 'JapanDesign';
+	src: url('../specialFonts/JapaneseDesigns-3mKM.ttf');
+}
+:root{
+	--body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);/**/
+	--msger-bg: #fff;
+	--left-msg-bg: linar-gradient(to right, #f895b9 #f44183);
+	--right-msg-bg: #ececec;
+	--color-page: orange;/*#4caf50;*/
+}
+html{
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*height: 134vh;*/
+	/*background-image: var(--body-bg);*/
+	font-family: "Baloo 2", cursive;
+	flex-direction: column;
+	background: rgb(42, 42, 42);
+}
+.msger{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	width: 100%;
+	height: 80vh;
+	max-width: 680px;
+	margin: 5px 10px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	/*height: calc(100% - 100px);*/
+	background: var(--msger-bg);
+	box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+	margin-top: 4%;
+}
+.msger-header{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 10px 10px 0px 0px;
+	background: #eee;
+	color: #666;
+}
+.msger-header-title{
+	display: flex;
+	align-items: center;
+}
+.msger-header-title img{
+	height: 2.5rem;
+	width: auto;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+.msger-header-title p{
+	letter-spacing: 1px;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.msger-chat{
+	flex: 1;
+	overflow-y: auto;
+	padding: 10px;
+}
+.msger-chat::-webkit-scrollbar{
+	width: 6px;
+}
+.msger-chat::-webkit-scrollbar-track{
+	background: #ddd;
+}
+.msger-chat::-webkit-scrollbar-thumb{
+	background: #bdbdbd;
+	border-radius: 10px;
+}
+.msg{
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 10px;
+}
+.msg:last-of-type{
+	margin: 0;
+}
+.msg-img{
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+}
+.msg-bubble{
+	max-width: 350px;
+	padding: 15px;
+	border-radius: 15px;
+	background: var(--left-msg-bg);
+}
+.msg-info{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.msg-info-name{
+	margin-right: 10px;
+	font-weight: bold;
+}
+.msg-info-time{
+	font-size: 0.85em;
+}
+.left-msg .msg-bubble{
+	color: black;/*#fff;*/
+	border-bottom-left-radius: 0;
+}
+.right-msg{
+	flex-direction: row-reverse;
+}
+.right-msg .msg-bubble{
+	background: var(--right-msg-bg);
+	color: #000;
+	border-bottom-right-radius: 0;
+}
+.right-msg .msg-img{
+	margin: 0 0 0 10px;
+}
+.msger-inputarea{
+	display: flex;
+	padding: 10px;
+	background: var(--color-page);
+	border-radius: 0px 0px 10px 10px;
+}
+.msger-inputarea *{
+	padding: 5px;
+	border: none;
+	border-radius: 3px;
+	font-size: 1em;
+	
+}
+.msger-input{
+	flex: 1;
+	background: transparent;
+	outline: none;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	color: white;
+}
+.msger-send-btn{
+	margin-left: 10px;
+	background: transparent;
+	color: #fff;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+.msger-chat{
+	background-color: #fcfcfe;
+}
+/*Contatti Social*/
+.icon:hover:nth-child(2){
+	background: #1877f2;
+	box-shadow: 0 0 20px #1877f2;
+}
+.icon:hover:nth-child(3){
+	background: #25d366;
+	box-shadow: 0 0 20px #25d366;
+}
+.icon:hover:nth-child(4){
+	background: #1da1f2;
+	box-shadow: 0 0 20px #1da1f2;
+}
+.icon i{
+	color: white;
+	position: relative;
+	top: -66%;/**/
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+svg circle{
+	stroke-dasharray: 105;
+	transition: all .8s;
+}
+.icon:hover svg circle{
+	stroke-dasharray: 220;
+}
+.main{
+	position: relative;
+	display: flex;
+	
+	cursor: pointer;
+	border-top: 2px solid white;
+	margin-top: 60px;
+	z-index: 1;
+}
+.icon{
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+	border-radius: 50px;
+	transition: all .8s;
+}
+.icon:hover{
+	background: #e60073;
+	box-shadow: 0 0 20px #e60073;
+}
+/*Parte alta della pagina*/
+#header{
+	min-width: 100%;
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--color-page);
+    border-radius: 10px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    top: 0;
+    margin-bottom: 5%;
+    z-index: 1;
+	}
+#header img{
+	width: 23%;
+	height: 73%;
+	max-width: 220px;
+	max-height: 100px;
+	margin: 5px;
+	border-radius: 5px;
+}
+#header h1{
+	font-size: 4vh;
+	margin: 13px;
+}
+header p{
+	font-family: "Baloo 2", cursive;
+	color: black;
+}
+
+h1{
+	font-family: 'Osake';
+	color: white;
+}
+h2{
+	color: white;
+}
+li img{
+	border-radius: 50px;
+	width: 40px;
+	height: 40px;
+	margin-top: 5px;
+}
+#circle {
+	  position: absolute;
+	  top: 10px;
+	  right: 25px;
+      width: 10px;
+      height: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background: #32cd32;
+    }
+#favouriteCircle, #iconBox1{
+	position: absolute;
+	  top: 77px;
+	  right: 10px;/**/
+      width: 15px;
+      height: 15px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background: #32cd32;
+	  line-height: 15px; 
+	  font-size: 10px;
+}
+#iconBox1{
+	top: 23px;
+}
+/*Parte di coolNavbar*/
+nav{
+	/*Parte nuova*/
+	position: fixed;
+	width: 513px;
+	height: 50px;
+	background: #fff;
+	box-shadow: 0 6px 10px rgba(179, 179, 179, .5);
+	align-items: center;
+	border-radius: 10px;
+	top: 12%;
+	z-index: 2;
+	border-top: solid 2px var(--color-page);
+	border-left: solid 2px var(--color-page);
+	border-right: solid 2px var(--color-page);
+	
+}
+
+ul{
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	font-family: 'Harukaze';
+	font-size: 40px;
+	display: block;
+	width: calc(513px / 5);
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+	color: #121212;
+}
+.slide{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: calc(410px / 4);
+	height: 4px;
+	background: var(--color-page);/*#9370DB;#3641b7;*/
+	transition: .4s;
+	border-radius: 5px;
+}
+p{
+	font-family: 'Harukaze';
+	color: white;
+	font-size: 44px;
+	width: 70%;
+}
+/*Parte orologio*/
+
+.time {
+	font-family: "Work Sans", sans-serif;
+    display: grid;
+    place-items: center;
+    height: 25vh;
+    margin: 20%;
+	background: #222;
+	color: #fff; 
+    padding: 8px;
+    text-align: center;
+    width: 300px;
+	border-radius: 40px;
+	border: solid var(--color-page) 1px;
+}
+.hms {
+    font-size: 48px;
+    font-weight: 200;
+}
+.ampm {
+    font-size: 12px;
+}
+.date {
+    font-size: 10px;
+}
+
+/*Parte del slow drop menu*/
+.dropbtn {
+  background-color: black;/*#4CAF50;*/
+  transition: 0.3s;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  align-items: center;
+}
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+  display: none;/**/
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: black;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 5px;
+	padding: 5px, 5px;
+	color: white;
+	/*padding: 12px 16px;*/
+	text-decoration: none;
+	display: block;
+	z-index: 2;
+}
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: var(--color-page);/*#9370DB;#f1f1f1;*/
+  color: white;/*#000000;*/
+  border-radius: 10px;
+}
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: inline;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+  background-color: var(--color-page);/*#3e8e41;*/
+  color: white;
+}
+.dropdown1 {
+  position: fixed;
+  top: 252px;
+  left: 2%;
+}
+.dropdown2 {
+  position: fixed;
+  top: 292px;
+  left: 2%;
+}
+.pageheading {
+  font-family: verdana;
+  font-size: 85%;
+  position: absolute;
+  left: 50px;
+  top: 210px;
+  background-color: #4CAF50;
+  border-radius: 6px;
+}
+/*Parte delle cards della FAQ*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.container1{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 4%;
+	margin-bottom: 4%;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	width: 80%;
+}
+.card1{
+	width: 250px;
+	height: 200px;
+	color: white;
+	margin: 1em;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 1.5em;/**/
+	text-align: center;
+	cursor: pointer; 
+	position: relative;
+}
+.card1 p{
+	font-family: 'Poppins', sans-serif;
+}
+.icon1{
+	width: 60px;
+	height: 60px;
+	background: var(--color-page);/*#DA0037;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+.card1:hover .icon{
+	box-shadow: 0 0 10px red;
+}
+.icon1 i{
+	font-size: 1.5em;
+}
+.card1 p{
+	margin: 0.5em 0;
+	font-size: 0.8em;
+	display: none;
+	opacity: 0;
+	transition: all .4s;
+}
+.card1:hover p{
+	display: block;
+	opacity: 1;
+}
+.card1 h4{
+	margin-top: 0.5em;
+}
+
+.card1::before, .card1::after{
+	content: '';
+	position: absolute;
+	background: #171717;
+	width: 100%;
+	height: 40%;
+	z-index: -10;
+	border-radius: 15px 15px 0 0;
+	transition: all .4s;
+}
+.card1::before{
+	top: 0;
+}
+.card1:hover::before{
+	transform: translateY(-20px);
+}
+.card1::after{
+	bottom: 10px;
+	height: 60%;
+	border-radius: 0 0 15px 15px;
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ellas Map</title>
+		<link rel="shortcut icon" href="icon.ico">
+		<!--<link rel="shortcut icon" href="icon.ico">-->
+		<link rel="stylesheet" href= "mappa_Ellas.css" />
+		<link rel ="stylesheet" href = "../css/font-awesome.css"/>
+		<!--<script src="chatbot1.js" defer></script>-->
+		<script src="mappa_Ellas.js" defer></script>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	<!--Menu laterale -->
+	<aside>
+			<div class="dropdown">
+				<div class="dropdown1">
+					<button class="dropbtn">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+					<div class="dropdown-content">
+						<a href="#" id="newGame">New Game </a>
+						<a href="#" id="loadGame">Load Game</a>
+						<a href="#" id="saveGame">Save</a>
+						<a href="#" id="mode">Player mode</a>
+						
+					</div>
+				</div>
+			</div>
+			<div class="dropdown">
+				<div class="dropdown2">
+					<button class="dropbtn">
+						<i class="fa fa-compass" aria-hidden="true"></i>
+					</button>
+					<div class="dropdown-content">
+						<a href="#" id="selectColor">Select Color </a>
+						<a href="#" id="showLikedSelector">Liked</a>
+						<a href="#" id="searchBarAck">Find </a>
+					</div>
+				</div>
+			</div>
+			<!--Draggable elements-->
+			<!-- Draggable DIV -->
+			<div id="army" class="division">
+			<!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+				<div id="armyheader" class="divisionheader"></div>
+				<div class="divisionCount">2</div>
+			</div>
+			<!-- Draggable DIV -->
+			<div id="army1" class="division">
+			<!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+				<div id="army1header" class="divisionheader"></div>
+				<div class="divisionCount">3</div>
+			</div>
+			</aside>
+		<!--Mappa di gioco -->
+		<div class = "container1">
+		<div class="map-image" style="display: block;background-image:url(sparta_map.png) ; position: relative; padding: 0px; width: 835px; height: 715px;">
+		<canvas style="width: 835px; height: 715px; position: absolute; left: 0px; top: 0px; padding: 0px; border: 0px; opacity: 0;" height="715" width="835"></canvas>
+
+		<img src="sparta_map.png" usemap="#spartamap" class="map-image maphilighted" alt="map" style="opacity: 0; position: absolute; left: 0px; top: 0px; padding: 0px; border: 0px;">
+		<map name="spartamap" id="spartamap">
+    <area shape="poly" coords="317,180,315,182,315,186,317,192,322,198,333,205,334,207,336,214,326,208,322,206,317,208,316,202,312,196,311,191,312,186,311,181,307,180,311,177,314,177,317,180,317,180" href="javascript:;" title="pel_kalkidike_mende" id="pel_kalkidike_mende" class="region" rel="pel_athenai">
+    <area shape="poly" coords="336,173,339,180,345,186,350,190,353,196,356,202,354,205,352,209,348,204,342,199,339,192,337,187,333,182,327,182,322,180,326,177,332,176,336,173,336,173" href="javascript:;" title="pel_kalkidike_torone" id="pel_kalkidike_torone" class="region" rel="pel_athenai">
+    <area shape="poly" coords="327,143,333,142,336,142,339,145,340,147,342,151,348,153,345,154,343,154,344,163,346,165,351,167,353,166,357,163,359,165,359,167,360,169,365,171,371,177,372,180,374,183,376,186,380,191,373,192,367,179,362,175,355,175,351,169,346,169,345,170,340,169,331,173,320,177,311,174,303,177,292,169,285,162,282,157,287,156,296,148,303,143,314,141,327,143,327,143" href="javascript:;" title="pel_kalkidike_olinthos" id="pel_kalkidike_olinthos" class="region" rel="pel_korinthos">
+    <area shape="poly" coords="240,200,244,188,255,171,269,171,266,180,266,186,262,191,266,195,267,203,276,208,274,214,261,217,253,216,240,200" href="javascript:;" title="pel_makedon_dion" id="pel_makedon_dion" class="region">
+    <area shape="poly" coords="296,120,293,127,288,136,285,139,283,148,280,150,279,150,278,150,278,156,276,157,273,156,273,155,268,163,269,166,271,170,264,171,256,170,250,176,247,182,244,187,241,193,239,200,230,200,226,201,223,206,215,188,210,173,207,168,204,163,203,148,204,145,206,145,216,144,222,142,226,138,234,138,245,128,257,120,258,112,280,112,290,110,293,111,294,113,296,120,296,120" href="javascript:;" title="pel_makedon_aigai" id="pel_makedon_aigai" class="region">
+    <area shape="poly" coords="257,112,258,115,256,119,252,122,244,128,238,133,233,138,226,138,221,142,218,144,210,145,202,143,197,139,195,133,195,125,195,121,197,118,201,117,211,116,236,112,257,112,257,112" href="javascript:;" title="pel_makedon_arnisa" id="pel_makedon_arnisa" class="region">
+    <area shape="poly" coords="195,120,194,126,195,132,199,144,202,145,202,147,204,154,205,164,216,188,219,196,222,206,216,208,211,212,209,218,208,222,207,226,201,229,195,234,192,226,189,219,185,209,184,201,174,177,167,162,170,155,174,149,172,142,172,139,173,138,174,138,176,134,176,132,175,125,178,122,189,120,195,120,195,120" href="javascript:;" title="pel_makedon_argos_orestiko" id="pel_makedon_argos_orestiko" class="region">
+    <area shape="poly" coords="173,126,173,125,174,128,172,129,171,132,172,133,174,134,170,136,169,139,173,149,170,153,166,158,160,160,157,161,155,165,152,179,150,185,145,195,140,198,133,199,127,201,125,207,129,218,128,221,126,222,120,228,119,232,114,239,102,233,102,227,106,228,107,226,104,218,101,215,99,213,100,209,95,202,85,194,71,184,61,166,62,163,65,165,66,167,68,170,72,174,73,164,83,156,89,152,96,151,107,147,122,146,145,143,150,139,158,133,162,130,167,130,170,126,173,126,173,126" href="javascript:;" title="pel_epeiros_antigonia" id="pel_epeiros_antigonia" class="region">
+    <area shape="poly" coords="182,201,183,211,187,221,192,235,189,239,185,244,178,250,166,254,161,258,158,264,156,262,152,266,144,256,137,247,135,241,136,236,133,228,129,223,131,218,128,208,128,204,131,202,135,200,140,200,145,195,150,189,151,184,153,169,156,164,162,162,167,167,173,180,182,201,182,201" href="javascript:;" title="pel_epeiros_dodona" id="pel_epeiros_dodona" class="region">
+    <area shape="poly" coords="98,227,95,230,92,233,93,237,97,241,97,247,98,252,102,254,106,256,108,262,106,263,100,260,94,255,94,249,93,245,85,235,81,228,83,225,93,222,96,223,98,227,98,227" href="javascript:;" title="pel_epeiros_korkyra" id="pel_epeiros_korkyra" class="region">
+    <area shape="poly" coords="137,237,137,241,138,246,144,255,153,264,147,267,143,273,139,285,135,282,133,279,131,272,127,271,123,270,117,259,117,256,119,255,117,253,120,251,118,248,116,250,113,249,113,242,121,233,122,228,129,223,131,224,134,229,137,237,137,237" href="javascript:;" title="pel_epeiros_elaea" id="pel_epeiros_elaea" class="region">
+    <area shape="poly" coords="241,202,246,210,250,215,253,218,254,216,255,215,258,217,265,219,267,238,265,257,264,258,253,258,244,260,235,267,229,274,221,278,211,278,207,278,202,282,194,271,185,263,181,259,179,254,181,249,185,244,190,239,194,234,209,224,210,220,211,214,212,211,214,209,226,205,235,201,241,202,241,202" href="javascript:;" title="pel_thessaly_larisa" id="pel_thessaly_larisa" class="region">
+    <area shape="poly" coords="282,224,285,242,288,246,295,250,297,253,300,257,306,268,312,280,311,283,309,286,304,289,299,292,296,290,294,288,294,285,297,283,301,288,303,285,304,282,301,274,299,270,291,266,289,265,288,271,284,271,280,273,278,271,265,257,265,219,270,217,275,219,282,224,282,224" href="javascript:;" title="pel_thessaly_pherae" id="pel_thessaly_pherae" class="region">
+    <area shape="poly" coords="267,257,279,272,278,276,281,281,286,283,286,287,286,288,290,288,291,290,289,293,287,295,289,297,295,295,288,302,284,307,275,299,267,294,257,292,252,292,250,295,244,315,236,310,220,304,206,299,201,284,201,281,204,279,212,278,226,278,234,269,243,261,251,258,262,257,267,257,267,257" href="javascript:;" title="pel_thessaly_pharsalos" id="pel_thessaly_pharsalos" class="region">
+    <area shape="poly" coords="266,295,274,299,279,307,277,311,269,307,265,308,263,310,263,313,266,315,268,314,270,313,273,315,277,319,276,326,275,329,274,330,267,326,257,323,247,321,246,319,248,311,250,301,252,296,256,294,266,295,266,295" href="javascript:;" title="pel_boiotia_lamia" id="pel_boiotia_lamia" class="region" rel="pel_sparta">
+    <area shape="poly" coords="281,335,277,343,276,349,283,367,281,372,276,372,275,370,275,367,277,367,272,361,271,357,263,365,261,363,262,360,259,355,254,352,251,360,247,361,242,359,239,360,238,361,234,359,232,358,232,336,244,322,246,320,250,321,257,322,266,326,281,335,281,335" href="javascript:;" title="pel_boiotia_delphi" id="pel_boiotia_delphi" class="region" rel="pel_boiotia">
+    <area shape="poly" coords="279,320,279,321,282,322,283,321,285,320,294,324,295,327,296,331,298,332,300,330,303,328,308,331,311,335,310,337,309,340,296,341,284,336,277,332,274,329,277,320,279,320,279,320" href="javascript:;" title="pel_boiotia_opos" id="pel_boiotia_opos" class="region" rel="pel_boiotia">
+    <area shape="poly" coords="296,341,309,339,312,345,320,347,325,345,329,351,332,359,327,363,317,369,303,377,300,375,298,373,296,376,293,374,290,373,286,376,284,375,280,362,276,355,276,349,280,334,288,338,296,341,296,341" href="javascript:;" title="pel_boiotia_thebai" id="pel_boiotia_thebai" class="region" rel="pel_boiotia">
+    <area shape="poly" coords="179,254,179,259,183,264,188,267,193,273,204,298,191,307,182,314,175,309,173,302,174,295,170,294,163,297,151,293,148,294,148,297,149,298,150,300,149,301,146,303,145,295,142,290,141,286,142,278,145,273,149,269,159,261,172,254,179,254,179,254" href="javascript:;" title="pel_ambrakia_ambrakia" id="pel_ambrakia_ambrakia" class="region" rel="pel_korinthos">
+    <area shape="poly" coords="168,311,169,310,171,309,176,312,181,317,174,338,171,341,166,345,164,341,164,337,164,333,160,331,159,337,158,339,156,341,156,333,157,332,159,329,158,327,157,327,158,323,157,319,155,317,151,319,146,319,144,330,149,329,147,330,148,336,145,333,140,336,138,334,137,333,135,334,134,336,137,324,137,320,142,315,150,311,150,308,153,305,158,305,163,308,168,311,168,311" href="javascript:;" title="pel_ambrakia_anaktorio" id="pel_ambrakia_anaktorio" class="region" rel="pel_korinthos">
+    <area shape="poly" coords="136,349,139,360,137,365,145,373,151,382,150,388,148,389,142,386,137,384,135,385,133,386,129,383,127,379,129,372,128,370,125,376,124,378,123,380,120,379,119,377,119,374,123,361,125,360,127,361,128,363,131,360,131,356,131,352,133,349,136,349,136,349" href="javascript:;" title="pel_ambrakia_pronnoi" id="pel_ambrakia_pronnoi" class="region" rel="pel_korinthos">
+    <area shape="poly" coords="217,304,228,310,236,313,240,315,245,320,238,325,233,332,227,338,220,342,209,342,202,343,197,347,192,352,189,359,177,365,172,362,170,359,171,356,173,354,170,346,174,339,179,333,179,329,180,327,181,327,181,320,182,316,185,314,197,306,200,303,206,303,217,304,217,304" href="javascript:;" title="pel_aitolia_thermon" id="pel_aitolia_thermon" class="region">
+    <area shape="poly" coords="230,340,230,353,226,356,222,355,212,360,203,360,199,361,196,364,193,364,191,362,190,360,192,355,196,350,202,346,208,345,220,344,224,342,230,340,230,340" href="javascript:;" title="pel_aitolia_naupaktos" id="pel_aitolia_naupaktos" class="region" rel="pel_athenai">
+    <area shape="poly" coords="152,410,157,415,160,420,154,418,150,419,150,422,151,424,149,426,142,419,136,410,137,405,142,400,144,405,146,407,148,407,152,410,152,410" href="javascript:;" title="pel_elis_zakynthos" id="pel_elis_zakynthos" class="region" rel="pel_athenai">
+    <area shape="poly" coords="233,368,236,372,241,376,248,377,250,378,255,379,256,379,258,381,250,389,240,395,227,391,223,391,221,393,203,392,194,388,186,383,185,373,200,380,202,377,206,371,211,364,216,361,224,363,233,368,233,368" href="javascript:;" title="pel_elis_patrai" id="pel_elis_patrai" class="region">
+    <area shape="poly" coords="188,383,195,389,204,393,221,393,223,391,227,391,232,391,241,397,237,412,227,414,216,415,206,417,200,422,193,432,187,427,180,426,180,415,172,410,169,408,167,405,169,400,173,398,178,393,184,383,188,383,188,383" href="javascript:;" title="pel_elis_elis" id="pel_elis_elis" class="region">
+    <area shape="poly" coords="238,412,238,444,215,444,209,445,204,448,194,432,195,428,198,424,205,419,210,418,214,416,231,414,233,412,238,412,238,412" href="javascript:;" title="pel_elis_olympia" id="pel_elis_olympia" class="region">
+    <area shape="poly" coords="317,305,317,308,319,313,328,321,316,328,313,323,309,318,302,311,297,313,294,311,292,309,288,314,282,314,282,311,291,305,301,298,305,297,310,296,313,299,317,305,317,305" href="javascript:;" title="pel_euboia_oreos" id="pel_euboia_oreos" class="region" rel="pel_athenai">
+    <area shape="poly" coords="337,322,337,324,339,327,345,331,351,333,357,330,361,330,363,332,361,337,369,343,366,346,366,358,362,359,355,354,350,356,340,353,333,350,331,342,327,338,324,336,318,328,318,325,320,323,323,324,325,322,337,322,337,322" href="javascript:;" title="pel_euboia_kalkis" id="pel_euboia_kalkis" class="region" rel="pel_athenai">
+    <area shape="poly" coords="368,357,372,373,376,378,385,380,391,380,392,386,391,390,388,397,382,392,379,393,378,396,373,388,368,381,367,376,366,373,364,368,360,362,360,357,368,357,368,357" href="javascript:;" title="pel_euboia_karystos" id="pel_euboia_karystos" class="region" rel="pel_athenai">
+    <area shape="poly" coords="415,403,416,414,417,415,420,416,417,420,413,417,410,412,404,404,402,406,401,400,401,395,404,394,405,395,407,398,410,402,415,403,415,403" href="javascript:;" title="pel_euboia_andros" id="pel_euboia_andros" class="region" rel="pel_athenai">
+    <area shape="poly" coords="223,485,222,487,220,489,220,496,222,507,220,510,217,514,214,514,212,513,212,512,213,509,209,507,204,503,202,498,203,496,205,494,201,494,197,483,197,472,205,472,215,477,220,481,223,485,223,485" href="javascript:;" title="pel_lakedaimon_pylos" id="pel_lakedaimon_pylos" class="region" rel="pel_sparta">
+    <area shape="poly" coords="232,446,239,452,245,461,242,466,242,489,236,498,233,498,232,495,234,488,232,485,229,485,224,485,218,479,212,474,204,472,197,473,197,468,203,462,204,457,203,453,202,450,214,446,232,446,232,446" href="javascript:;" title="pel_lakedaimon_messenia" id="pel_lakedaimon_messenia" class="region" rel="pel_sparta">
+    <area shape="poly" coords="264,453,265,452,265,451,270,451,275,451,281,461,285,470,283,473,284,475,287,478,289,489,294,502,296,508,295,511,293,511,291,511,291,514,292,515,293,517,292,518,291,520,293,525,299,531,299,534,302,538,304,540,299,542,294,540,292,537,292,533,285,532,285,528,283,525,281,524,282,522,280,519,276,520,275,517,276,515,277,514,275,507,268,506,262,508,259,511,258,516,259,517,260,518,258,519,257,521,259,524,255,524,254,523,254,526,258,538,257,542,255,546,251,542,251,539,247,536,245,533,246,530,248,527,246,523,248,521,238,495,239,490,242,486,242,466,243,462,245,459,252,453,258,451,264,453,264,453" href="javascript:;" title="pel_lakedaimon_sparta" id="pel_lakedaimon_sparta" class="region" rel="pel_sparta">
+    <area shape="poly" coords="287,546,290,551,297,557,293,561,292,564,294,568,290,569,282,564,282,546,287,546,287,546" href="javascript:;" title="pel_lakedaimon_kythera" id="pel_lakedaimon_kythera" class="region" rel="pel_sparta">
+    <area shape="poly" coords="254,389,255,404,256,421,256,429,257,449,252,451,246,457,238,447,238,408,242,397,245,392,250,389,254,389,254,389" href="javascript:;" title="pel_argolis_mantinea" id="pel_argolis_mantinea" class="region">
+    <area shape="poly" coords="283,399,288,396,282,389,287,384,296,388,301,390,305,395,301,398,298,400,291,403,290,405,293,407,300,408,300,419,295,418,286,415,276,410,263,398,255,398,253,395,253,392,253,387,256,384,262,383,267,385,273,391,278,396,283,399,283,399" href="javascript:;" title="pel_argolis_korinthos" id="pel_argolis_korinthos" class="region" rel="pel_korinthos">
+    <area shape="poly" coords="263,398,271,407,281,413,302,420,300,429,307,434,315,435,316,436,319,437,320,436,322,435,324,436,326,439,321,440,320,444,319,447,317,449,308,449,301,460,294,452,295,449,298,447,291,443,286,439,283,438,281,439,274,432,272,431,271,433,272,442,275,447,269,451,266,450,266,449,264,451,259,451,257,447,257,442,258,435,256,420,256,398,263,398,263,398" href="javascript:;" title="pel_argolis_argos" id="pel_argolis_argos" class="region">
+    <area shape="poly" coords="386,511,388,510,389,509,390,510,391,513,390,520,377,520,376,512,379,511,380,513,382,516,383,509,386,511,386,511" href="javascript:;" title="pel_argolis_melos" id="pel_argolis_melos" class="region">
+    <area shape="poly" coords="361,376,353,383,356,388,349,392,344,397,339,406,335,401,329,396,329,390,325,389,318,391,315,397,306,395,302,393,300,389,302,384,302,379,305,375,310,373,323,364,337,361,350,365,356,370,361,376,361,376" href="javascript:;" title="pel_attike_athenai" id="pel_attike_athenai" class="region" rel="pel_athenai">
+    <area shape="poly" coords="356,390,356,404,360,413,358,416,357,418,357,422,356,427,351,427,350,421,348,416,345,412,342,411,340,410,340,407,345,397,353,390,356,390,356,390" href="javascript:;" title="pel_attike_laviro" id="pel_attike_laviro" class="region" rel="pel_athenai">
+    <area shape="poly" coords="438,475,437,482,432,489,429,485,429,482,431,475,438,475,438,475" href="javascript:;" title="pel_attike_paros" id="pel_attike_paros" class="region" rel="pel_athenai">
+    <area shape="poly" coords="456,469,459,478,458,480,457,481,458,486,455,490,450,494,442,478,448,474,450,471,452,469,456,469,456,469" href="javascript:;" title="pel_attike_naxos" id="pel_attike_naxos" class="region" rel="pel_athenai">
+    <area shape="poly" coords="574,499,558,509,553,511,550,513,550,517,547,517,547,511,556,502,562,497,569,496,571,496,574,499,574,499" href="javascript:;" title="pel_dodekanisa_kos" id="pel_dodekanisa_kos" class="region" rel="pel_athenai">
+    <area shape="poly" coords="634,541,635,545,633,546,632,548,633,549,634,551,631,552,630,554,631,558,623,569,615,563,609,556,611,551,620,546,631,541,634,541,634,541" href="javascript:;" title="pel_dodekanisa_rodos" id="pel_dodekanisa_rodos" class="region">
+    <area shape="poly" coords="626,573,622,574,616,577,612,585,609,589,605,593,603,591,602,588,605,576,602,571,600,567,602,563,606,558,609,557,618,563,626,573,626,573" href="javascript:;" title="pel_dodekanisa_lindos" id="pel_dodekanisa_lindos" class="region">
+    <area shape="poly" coords="569,606,564,618,566,621,569,624,567,627,568,628,569,630,567,631,565,638,561,635,561,632,562,629,562,626,560,620,563,611,566,603,566,601,564,596,569,594,569,606,569,606" href="javascript:;" title="pel_dodekanisa_karpathos" id="pel_dodekanisa_karpathos" class="region">
+    <area shape="poly" coords="340,612,340,621,354,627,358,621,363,619,367,621,369,626,367,628,364,631,366,632,374,630,374,641,376,642,384,639,390,640,390,644,383,654,378,658,374,661,370,659,368,658,357,658,353,655,351,656,349,657,345,654,328,654,323,651,323,645,324,633,327,627,327,625,325,617,328,615,330,619,331,625,334,626,336,623,334,618,336,612,340,612,340,612" href="javascript:;" title="pel_krete_kydonia" id="pel_krete_kydonia" class="region">
+    <area shape="poly" coords="422,637,423,638,425,641,423,653,425,665,431,681,418,683,411,681,410,682,409,683,405,681,405,676,405,669,400,666,396,666,391,663,389,660,384,659,383,658,385,654,389,651,393,641,397,637,402,637,422,637,422,637" href="javascript:;" title="pel_krete_gortyna" id="pel_krete_gortyna" class="region">
+    <area shape="poly" coords="447,644,449,645,453,647,460,644,474,644,475,646,472,651,469,658,469,662,476,666,478,662,481,659,492,655,497,658,500,656,502,653,504,649,508,646,508,645,509,648,506,653,508,659,504,669,501,673,498,676,484,673,474,676,469,674,455,678,448,676,441,677,436,680,433,678,430,675,427,665,424,650,425,645,429,644,438,644,447,644,447,644" href="javascript:;" title="pel_krete_knossos" id="pel_krete_knossos" class="region">
+    <area shape="poly" coords="720,523,727,524,737,524,744,528,752,535,758,543,761,553,760,555,759,557,755,557,750,560,746,560,736,570,734,567,733,566,731,567,730,568,726,565,723,561,719,561,711,556,708,557,707,558,700,553,692,546,692,536,691,531,687,529,687,523,691,525,694,523,697,520,705,520,712,520,720,523,720,523" href="javascript:;" title="pel_karia_xanthos" id="pel_karia_xanthos" class="region">
+    <area shape="poly" coords="792,496,789,500,787,504,785,513,785,522,786,524,788,527,784,535,781,544,783,547,785,551,783,552,781,554,783,556,778,561,778,556,763,551,754,536,748,528,740,525,740,522,743,517,745,511,746,505,749,501,767,485,780,478,783,480,787,486,792,496,792,496" href="javascript:;" title="pel_karia_phaselis" id="pel_karia_phaselis" class="region">
+    <area shape="poly" coords="747,416,753,431,761,445,773,458,779,467,782,476,781,480,778,479,768,488,759,495,754,497,750,501,746,507,744,515,741,521,735,524,723,522,716,520,711,518,696,520,685,515,677,510,672,502,669,495,665,471,667,466,674,465,682,461,691,437,693,433,696,431,704,429,743,410,747,416,747,416" href="javascript:;" title="pel_karia_kibyra" id="pel_karia_kibyra" class="region">
+    <area shape="poly" coords="712,378,729,394,744,412,741,411,729,419,722,421,708,426,696,434,691,439,689,446,684,461,680,464,674,467,667,468,659,466,649,459,639,451,634,445,636,433,633,429,628,427,626,403,639,398,652,396,665,389,672,385,681,382,694,381,712,378,712,378" href="javascript:;" title="pel_karia_kolossai" id="pel_karia_kolossai" class="region">
+    <area shape="poly" coords="663,469,665,473,668,480,669,487,670,497,674,503,676,507,677,508,678,510,675,513,673,517,674,521,679,518,676,526,671,526,670,519,669,516,666,514,662,513,659,514,658,515,657,513,659,507,657,504,656,503,654,504,653,507,649,507,648,503,648,501,650,501,648,499,644,499,642,501,645,503,645,507,642,507,640,504,638,507,635,507,635,504,637,502,635,500,632,501,631,505,633,509,638,514,632,514,628,517,625,526,620,528,616,528,620,525,625,522,623,518,621,517,617,518,618,515,620,514,623,514,626,512,626,507,616,511,599,511,596,515,594,518,592,517,591,516,581,519,576,517,576,514,579,513,582,511,591,510,592,507,595,506,598,507,601,509,608,506,609,507,611,508,618,507,621,506,618,503,621,499,618,496,627,494,631,489,636,487,637,487,639,485,637,482,636,481,648,475,661,468,663,469,663,469" href="javascript:;" title="pel_ionia_knidos" id="pel_ionia_knidos" class="region">
+    <area shape="poly" coords="638,449,642,453,648,460,655,464,662,469,655,472,648,475,641,480,626,484,612,487,583,490,580,487,577,484,573,486,568,491,565,480,568,475,574,473,578,476,579,477,581,479,585,478,586,475,586,472,588,466,593,462,597,460,602,460,614,458,621,457,628,454,631,450,634,448,638,449,638,449" href="javascript:;" title="pel_ionia_halikarnassos" id="pel_ionia_halikarnassos" class="region">
+    <area shape="poly" coords="620,415,627,415,628,425,631,429,633,431,635,437,634,447,630,453,624,456,612,459,604,460,596,461,595,462,593,463,589,460,586,462,583,465,583,461,584,457,582,456,579,457,577,459,575,455,580,451,577,447,567,456,562,454,562,452,563,449,562,444,561,438,556,427,549,427,549,425,549,423,558,421,563,419,567,416,571,416,581,419,585,416,605,411,620,415,620,415" href="javascript:;" title="pel_ionia_miletos" id="pel_ionia_miletos" class="region">
+    <area shape="poly" coords="588,377,593,379,598,382,604,383,612,385,619,391,623,398,627,415,619,415,613,414,605,411,581,419,578,418,578,417,567,417,566,402,566,398,565,394,559,394,553,389,552,386,574,378,588,377,588,377" href="javascript:;" title="pel_ionia_ephesos" id="pel_ionia_ephesos" class="region">
+    <area shape="poly" coords="624,281,627,298,633,308,639,316,643,321,652,327,656,329,663,331,671,335,681,341,686,344,690,350,697,361,711,377,698,378,686,381,684,380,682,379,664,389,651,394,639,396,628,403,620,391,615,385,610,382,603,381,598,380,591,376,583,375,583,371,581,368,578,358,578,353,574,343,576,334,575,330,573,326,568,317,568,306,568,302,566,302,579,293,593,285,603,287,610,285,618,281,624,281,624,281" href="javascript:;" title="pel_lydia_sardeis" id="pel_lydia_sardeis" class="region">
+    <area shape="poly" coords="565,304,564,303,566,302,569,302,568,312,568,317,571,323,575,328,577,334,575,344,578,352,579,362,580,367,584,373,582,375,564,379,550,386,546,385,543,386,539,390,536,379,533,377,532,375,533,373,526,373,524,383,521,384,517,382,515,381,513,376,510,375,508,371,507,372,505,373,500,370,499,367,500,360,502,358,506,363,516,354,508,348,505,339,505,332,507,329,510,328,513,328,516,330,525,347,523,349,522,352,525,360,526,359,528,360,526,354,528,352,532,355,537,358,540,356,545,354,551,353,558,352,554,349,551,349,546,350,542,353,532,337,528,326,531,322,536,322,539,324,542,322,539,317,544,315,551,307,559,305,563,302,565,304,565,304" href="javascript:;" title="pel_lydia_smyrna" id="pel_lydia_smyrna" class="region">
+    <area shape="poly" coords="545,416,547,417,547,411,552,413,553,419,538,428,533,422,528,420,524,423,521,415,529,411,535,410,540,411,545,416,545,416" href="javascript:;" title="pel_aigian_samos" id="pel_aigian_samos" class="region">
+    <area shape="poly" coords="486,440,483,440,483,436,490,426,497,426,503,424,509,422,505,428,499,432,486,440,486,440" href="javascript:;" title="pel_aigian_oinoi" id="pel_aigian_oinoi" class="region">
+    <area shape="poly" coords="493,343,491,348,492,350,493,357,492,363,489,369,490,373,487,373,484,375,483,378,474,369,479,363,484,358,480,351,477,347,473,344,473,342,473,339,476,337,482,337,488,338,491,339,493,343,493,343" href="javascript:;" title="pel_aigian_khios" id="pel_aigian_khios" class="region">
+    <area shape="poly" coords="507,269,505,273,515,283,523,296,520,297,518,297,515,300,506,303,489,294,490,290,493,288,501,284,497,280,494,279,489,283,485,290,473,283,472,278,472,274,475,272,481,270,489,269,492,265,494,263,498,264,504,265,506,266,507,269,507,269" href="javascript:;" title="pel_aigian_mytilene" id="pel_aigian_mytilene" class="region">
+    <area shape="poly" coords="445,202,445,206,441,211,439,217,441,222,439,224,432,216,422,220,421,205,429,204,438,209,441,202,445,202,445,202" href="javascript:;" title="pel_mysia_myrina" id="pel_mysia_myrina" class="region" rel="pel_athenai">
+    <area shape="poly" coords="625,238,625,253,622,278,618,280,614,282,605,287,594,284,585,288,580,292,570,299,563,301,558,306,556,304,550,309,543,304,540,307,534,303,533,299,534,296,536,294,538,293,539,291,537,286,533,284,529,281,529,276,520,272,517,269,516,266,516,263,518,261,522,260,523,265,526,266,528,265,529,263,530,261,543,244,556,241,571,237,583,237,590,236,596,235,600,229,603,221,625,238,625,238" href="javascript:;" title="pel_mysia_pergamon" id="pel_mysia_pergamon" class="region">
+    <area shape="poly" coords="555,163,557,161,558,160,561,160,562,166,563,168,567,170,571,172,573,177,573,186,577,195,585,205,603,221,600,228,597,235,591,236,582,237,570,238,554,242,539,244,535,245,531,246,524,246,511,250,505,254,503,253,502,252,497,253,493,255,491,257,487,256,486,253,486,250,491,233,489,220,490,210,491,205,494,203,495,204,496,205,499,203,500,201,502,197,503,195,507,191,507,186,513,183,528,165,530,165,531,167,533,165,541,168,545,164,551,160,555,163,555,163" href="javascript:;" title="pel_mysia_ilion" id="pel_mysia_ilion" class="region">
+    <area shape="poly" coords="688,89,689,90,693,92,701,93,716,96,729,97,734,136,726,150,718,158,712,162,707,159,704,156,698,158,692,156,689,158,686,163,691,166,697,169,704,170,696,178,685,186,664,200,656,205,641,218,635,224,631,232,625,238,613,228,601,219,594,214,588,208,586,205,577,195,573,186,573,179,575,174,580,172,588,175,596,170,593,167,590,168,588,162,584,159,583,158,583,155,586,154,597,156,606,160,604,163,601,166,601,170,613,167,625,167,643,168,644,169,645,170,647,168,648,167,650,166,653,166,664,170,670,167,675,162,668,158,665,159,663,161,658,158,653,156,653,153,661,146,668,142,669,143,671,144,691,138,697,135,700,140,705,137,722,138,724,136,722,132,717,134,712,133,687,133,685,128,682,128,680,125,664,111,670,98,668,95,667,95,672,89,680,89,688,89,688,89" href="javascript:;" title="pel_mysia_kyzikos" id="pel_mysia_kyzikos" class="region">
+    <area shape="poly" coords="535,150,540,151,527,158,522,163,518,169,509,179,502,186,503,190,497,195,492,199,492,196,494,192,496,187,498,183,492,174,515,159,522,155,527,152,531,149,535,150,535,150" href="javascript:;" title="pel_hellespontos_sestos" id="pel_hellespontos_sestos" class="region" rel="pel_athenai">
+    <area shape="poly" coords="622,67,644,79,655,85,667,88,664,92,663,103,660,110,655,113,647,111,642,113,639,111,637,108,616,103,617,90,620,72,622,67,622,67" href="javascript:;" title="pel_hellespontos_perinthos" id="pel_hellespontos_perinthos" class="region">
+    <area shape="poly" coords="621,67,616,101,609,103,603,106,600,109,598,113,585,108,575,110,571,114,570,121,567,122,567,122,566,119,564,118,556,117,547,115,541,111,540,102,539,95,535,90,534,88,534,87,538,86,560,79,578,70,596,65,609,60,616,63,621,67,621,67" href="javascript:;" title="pel_hellespontos_perinthos" id="pel_hellespontos_perinthos" class="region">
+    <area shape="poly" coords="526,87,534,88,538,93,540,101,541,112,550,117,560,117,565,118,568,123,565,129,561,136,539,151,534,149,531,146,528,141,524,143,519,142,515,143,512,148,508,146,499,147,493,120,494,114,498,109,497,103,497,98,498,93,500,88,506,86,510,87,515,89,526,87,526,87" href="javascript:;" title="pel_hellespontos_kypsela" id="pel_hellespontos_kypsela" class="region">
+    <area shape="poly" coords="400,131,402,134,404,140,404,147,400,148,394,151,389,146,386,141,389,133,392,130,395,129,400,131,400,131" href="javascript:;" id="pel_thraike_0" class="region">
+    <area shape="poly" coords="496,87,497,89,494,97,494,112,488,121,489,124,491,126,495,138,495,148,489,148,485,145,484,143,484,139,482,137,480,129,477,125,474,123,473,124,473,125,471,123,469,122,466,124,469,118,473,112,473,109,471,103,480,84,487,86,496,87,496,87" href="javascript:;" id="pel_thraike_1" class="region">
+    <area shape="poly" coords="478,82,479,83,481,86,476,93,472,103,472,115,470,123,466,125,463,124,462,123,460,125,457,122,454,122,450,122,442,117,437,115,433,117,427,115,427,108,431,103,432,94,432,87,434,81,439,78,447,77,459,78,478,82,478,82" href="javascript:;" title="pel_thraike_maroneia" id="pel_thraike_maroneia" class="region" rel="pel_athenai">
+    <area shape="poly" coords="436,76,438,79,434,84,432,90,433,104,430,105,429,106,429,108,422,109,412,115,404,125,394,122,391,116,391,110,392,101,394,96,396,91,396,80,402,78,411,76,436,76,436,76" href="javascript:;" title="pel_thraike_abdera" id="pel_thraike_abdera" class="region" rel="pel_athenai">
+    <area shape="poly" coords="395,80,396,87,394,94,392,97,389,101,388,113,381,116,373,113,361,108,351,101,348,97,347,94,347,90,383,80,395,80,395,80" href="javascript:;" title="pel_amphipolis_krinides" id="pel_amphipolis_krinides" class="region" rel="pel_athenai">
+    <area shape="poly" coords="346,98,351,104,360,109,378,118,373,127,365,133,358,137,346,130,341,133,336,138,330,140,318,138,315,139,307,139,301,142,290,151,287,142,288,138,292,133,296,127,298,119,297,113,295,108,298,105,320,96,331,92,343,91,346,98,346,98" href="javascript:;" title="pel_amphipolis_amphipolis" id="pel_amphipolis_amphipolis" class="region" rel="pel_athenai">
+</map>
+		<!--Inserisco i div per le regioni-->
+	<div id="kalkidike_mende" class="regionDiv" rel="athenai"></div>
+    <div id="kalkidike_torone" class="regionDiv" rel="athenai"></div>
+    <div id="kalkidike_olinthos" class="regionDiv" rel="korinthos"></div>
+    <div id="makedon_dion" class="regionDiv"></div>
+    <div id="makedon_aigai" class="regionDiv"></div>
+    <div id="makedon_arnisa" class="regionDiv"></div>
+    <div id="makedon_argos_orestiko" class="regionDiv"></div>
+    <div id="epeiros_antigonia" class="regionDiv"></div>
+    <div id="epeiros_dodona" class="regionDiv"></div>
+    <div id="epeiros_korkyra" class="regionDiv"></div>
+    <div id="epeiros_elaea" class="regionDiv"></div>
+    <div id="thessaly_larisa" class="regionDiv"></div>
+    <div id="thessaly_pherae" class="regionDiv"></div>
+    <div id="thessaly_pharsalos" class="regionDiv"></div>
+    <div id="boiotia_lamia" class="regionDiv" rel="sparta"></div>
+    <div id="boiotia_delphi" class="regionDiv" rel="boiotia"></div>
+    <div id="boiotia_opos" class="regionDiv" rel="boiotia"></div>
+    <div id="boiotia_thebai" class="regionDiv" rel="boiotia"></div>
+    <div id="ambrakia_ambrakia" class="regionDiv" rel="korinthos"></div>
+    <div id="ambrakia_anaktorio" class="regionDiv" rel="korinthos"></div>
+    <div id="ambrakia_pronnoi" class="regionDiv" rel="korinthos"></div>
+    <div id="aitolia_thermon" class="regionDiv"></div>
+    <div id="aitolia_naupaktos" class="regionDiv" rel="athenai"></div>
+    <div id="elis_zakynthos" class="regionDiv" rel="athenai"></div>
+    <div id="elis_patrai" class="regionDiv"></div>
+    <div id="elis_elis" class="regionDiv"></div>
+    <div id="elis_olympia" class="regionDiv"></div>
+    <div id="euboia_oreos" class="regionDiv" rel="athenai"></div>
+    <div id="euboia_kalkis" class="regionDiv" rel="athenai"></div>
+    <div id="euboia_karystos" class="regionDiv" rel="athenai"></div>
+    <div id="euboia_andros" class="regionDiv" rel="athenai"></div>
+    <div id="lakedaimon_pylos" class="regionDiv" rel="sparta"></div>
+    <div id="lakedaimon_messenia" class="regionDiv" rel="sparta"></div>
+    <div id="lakedaimon_sparta" class="regionDiv" rel="sparta"></div>
+    <div id="lakedaimon_kythera" class="regionDiv" rel="sparta"></div>
+    <div id="argolis_mantinea" class="regionDiv"></div>
+    <div id="argolis_korinthos" class="regionDiv" rel="korinthos"></div>
+    <div id="argolis_argos" class="regionDiv"></div>
+    <div id="argolis_melos" class="regionDiv"></div>
+    <div id="attike_athenai" class="regionDiv" rel="athenai"></div>
+    <div id="attike_laviro" class="regionDiv" rel="athenai"></div>
+    <div id="attike_paros" class="regionDiv" rel="athenai"></div>
+    <div id="attike_naxos" class="regionDiv" rel="athenai"></div>
+    <div id="dodekanisa_kos" class="regionDiv" rel="athenai"></div>
+    <div id="dodekanisa_rodos" class="regionDiv"></div>
+    <div id="dodekanisa_lindos" class="regionDiv"></div>
+    <div id="dodekanisa_karpathos" class="regionDiv"></div>
+    <div id="krete_kydonia" class="regionDiv"></div>
+    <div id="krete_gortyna" class="regionDiv"></div>
+    <div id="krete_knossos" class="regionDiv"></div>
+    <div id="karia_xanthos" class="regionDiv"></div>
+    <div id="karia_phaselis" class="regionDiv"></div>
+    <div id="karia_kibyra" class="regionDiv"></div>
+    <div id="karia_kolossai" class="regionDiv"></div>
+    <div id="ionia_knidos" class="regionDiv"></div>
+    <div id="ionia_halikarnassos" class="regionDiv"></div>
+    <div id="ionia_miletos" class="regionDiv"></div>
+    <div id="ionia_ephesos" class="regionDiv"></div>
+    <div id="lydia_sardeis" class="regionDiv"></div>
+    <div id="lydia_smyrna" class="regionDiv"></div>
+    <div id="aigian_samos" class="regionDiv"></div>
+    <div id="aigian_oinoi" class="regionDiv"></div>
+    <div id="aigian_khios" class="regionDiv"></div>
+    <div id="aigian_mytilene" class="regionDiv"></div>
+    <div id="mysia_myrina" class="regionDiv" rel="athenai"></div>
+    <div id="mysia_pergamon" class="regionDiv"></div>
+    <div id="mysia_ilion" class="regionDiv"></div>
+    <div id="mysia_kyzikos" class="regionDiv"></div>
+    <div id="hellespontos_sestos" class="regionDiv" rel="athenai"></div>
+    <div id="hellespontos_perinthos" class="regionDiv"></div>
+    <div id="hellespontos_perinthos" class="regionDiv"></div>
+    <div id="hellespontos_kypsela" class="regionDiv"></div>
+    <div id="thraike_0" class="regionDiv"></div>
+    <div id="thraike_1" class="regionDiv"></div>
+    <div id="thraike_maroneia" class="regionDiv" rel="athenai"></div>
+    <div id="thraike_abdera" class="regionDiv" rel="athenai"></div>
+    <div id="amphipolis_krinides" class="regionDiv" rel="athenai"></div>
+    <div id="amphipolis_amphipolis" class="regionDiv" rel="athenai"></div>
+
+		<!---->
+		</div>
+		
+	</body>
+</html>
